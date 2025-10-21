@@ -6,7 +6,7 @@ export default function About() {
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
           {/* Coluna do Texto */}
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-brand-green-dark sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
               Conheça a Agro Nativa
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">

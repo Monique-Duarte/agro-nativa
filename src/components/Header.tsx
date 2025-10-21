@@ -18,9 +18,9 @@ export default function Header() {
         {/* --- Logo --- */}
         <Link href="/" className="flex items-center">
           <img
-            src="/images/logo.png"
+            src="/images/logoBranco.png"
             alt="Logo Agro Nativa"
-            className="h-10 w-auto"
+            className="h-12 w-auto"
           />
         </Link>
 
@@ -29,7 +29,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-gray-800 transition-colors hover:text-brand-green-dark font-medium" 
+              className="text-gray-800 transition-colors hover:text-[#224724] font-medium" 
             >
               {link.name}
             </Link>
@@ -39,7 +39,7 @@ export default function Header() {
           <Link
             href={WHATSAPP_LINK}
             target="_blank"
-            className="rounded-full bg-brand-green-dark px-5 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-green-light hover:text-brand-green-dark"
+            className="rounded-full bg-[#224724] px-5 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-[#9dd03a] hover:text-[#224724]"
           >
             Agendar Banho
           </Link>
@@ -48,7 +48,7 @@ export default function Header() {
         {/* --- Botão de Menu Mobile (ainda sem funcionalidade) --- */}
         <div className="md:hidden">
           {/* Adicionando text-gray-800 aqui também */}
-          <button className="rounded p-2 text-gray-800 hover:text-brand-green-dark">
+          <button className="rounded p-2 text-gray-800 hover:text-[#224724]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

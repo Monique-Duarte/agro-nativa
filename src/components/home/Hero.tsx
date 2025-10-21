@@ -33,14 +33,14 @@ export default function Hero() {
             href={WHATSAPP_LINK}
             target="_blank"
             // Botão principal, usando a cor de destaque
-            className="rounded-full bg-brand-green-light px-8 py-3 text-lg font-semibold text-brand-green-dark shadow-sm transition-transform hover:scale-105"
+            className="rounded-full bg-[#9dd03a] px-8 py-3 text-lg font-semibold text-[#224724] shadow-sm transition-transform hover:scale-105 hover:bg-[#224724] hover:text-white"
           >
             Agendar Agora
           </Link>
           <Link
             href="/banho-e-tosa" // Leva para a página de planos
             // Botão secundário (estilo "outline")
-            className="rounded-full border-2 border-white px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-white hover:text-brand-green-dark"
+            className="rounded-full border-2 border-white px-8 py-3 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-white hover:text-[#224724]"
           >
             Conhecer Planos
           </Link>

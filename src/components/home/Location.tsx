@@ -15,7 +15,7 @@ export default function Location() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Coluna 1: Informações de Contato */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-brand-green-dark sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
               Venha nos Visitar!
             </h2>
             <p className="text-lg text-gray-600">
@@ -25,7 +25,7 @@ export default function Location() {
 
             <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
               <div>
-                <h3 className="text-xl font-semibold text-brand-green-dark">
+                <h3 className="text-xl font-semibold text-[#224724]">
                   Endereço
                 </h3>
                 <p className="mt-1 text-gray-600">
@@ -36,19 +36,19 @@ export default function Location() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-brand-green-dark">
+                <h3 className="text-xl font-semibold text-[#224724]">
                   Telefone
                 </h3>
                 <a
                   href="tel:48999557752"
-                  className="mt-1 text-gray-600 hover:text-brand-green-light"
+                  className="mt-1 text-gray-600 hover:text-[#9dd03a]"
                 >
                   (48) 99955-7752
                 </a>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-brand-green-dark">
+                <h3 className="text-xl font-semibold text-[#224724]">
                   Horário
                 </h3>
                 <ul className="mt-1 text-gray-600">
@@ -63,7 +63,7 @@ export default function Location() {
               href={googleMapsLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-brand-green-light px-8 py-3 text-base font-medium text-brand-green-dark shadow-sm transition-transform hover:scale-105"
+              className="inline-block rounded-full bg-[#9dd03a] px-8 py-3 text-base font-medium text-[#224724] shadow-sm transition-transform hover:scale-105"
             >
               Ver no Google Maps
             </a>

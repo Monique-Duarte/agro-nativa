@@ -92,7 +92,7 @@ export default function StoreCategories() {
       <div className="container mx-auto max-w-7xl px-4">
         {/* Título da Seção */}
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-brand-green-dark sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
             Uma Loja Completa para seu Lar
           </h2>
           <p className="mt-4 text-lg text-gray-600">
@@ -107,12 +107,12 @@ export default function StoreCategories() {
             <Link
               key={category.name}
               href={category.href}
-              className="group flex flex-col items-center rounded-lg border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:border-brand-green-light hover:shadow-lg"
+              className="group flex flex-col items-center rounded-lg border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:border-[#9dd03a] hover:shadow-lg"
             >
-              <div className="rounded-full bg-brand-green-dark p-4 text-white transition-colors group-hover:bg-brand-green-light">
+              <div className="rounded-full bg-[#224724] p-4 text-white transition-colors group-hover:bg-[#9dd03a]">
                 {category.icon}
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-brand-green-dark">
+              <h3 className="mt-4 text-xl font-semibold text-[#224724]">
                 {category.name}
               </h3>
             </Link>

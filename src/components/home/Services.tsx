@@ -76,7 +76,7 @@ export default function Services() {
       <div className="container mx-auto max-w-7xl px-4">
         {/* Título da Seção */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-brand-green-dark sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
             Tudo para o seu Pet
           </h2>
           <p className="mt-4 text-lg text-gray-600">
@@ -91,10 +91,10 @@ export default function Services() {
               key={service.title}
               className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-green-light text-brand-green-dark">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#9dd03a] text-[#224724]">
                 {service.icon}
               </div>
-              <h3 className="mt-5 text-xl font-semibold text-brand-green-dark">
+              <h3 className="mt-5 text-xl font-semibold text-[#224724]">
                 {service.title}
               </h3>
               <p className="mt-2 text-base text-gray-600">
@@ -102,7 +102,7 @@ export default function Services() {
               </p>
               <Link
                 href={service.href}
-                className="mt-4 inline-block font-medium text-brand-green-dark hover:text-brand-green-light"
+                className="mt-4 inline-block font-medium text-[#224724] hover:text-[#9dd03a]"
               >
                 Saiba Mais &rarr;
               </Link>
