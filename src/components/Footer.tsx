@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from "next/image";
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -20,7 +21,7 @@ export default function Footer() {
 
           <div className="space-y-4 md:col-span-1 lg:col-span-2">
             <Link href="/" className="flex items-center">
-              <img
+              <Image
                 src="/images/logoBranco2.png"
                 alt="Logo Agro Nativa"
                 className="h-10 w-auto"
@@ -31,15 +32,16 @@ export default function Footer() {
               Tudo para seu pet, casa e jardim!
             </p>
             <div className="space-y-1 text-sm">
+              <p className='text-lg font-semibold text-white'>
+                Endereço:
+              </p>
               <p>
-                <strong>Endereço:</strong>
-                <br />
                 <Link href={ADDRESS_LINK} target="_blank" className="hover:text-[#9dd03a] hover:underline">
                   {ADDRESS_TEXT}
                 </Link>
               </p>
               <p>
-                <strong>Telefone:</strong>
+                Telefone:
                 <br />
                 <a
                   href="tel:48999557752"
@@ -51,7 +53,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-1 lg:col-span-1">
+          <div className="hidden md:flex md:col-span-1 lg:col-span-1">
             <h3 className="text-lg font-semibold text-white">Navegação</h3>
             <ul className="mt-4 space-y-2">
               {navLinks.map((link) => (
@@ -107,6 +109,7 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} AgroNativa. Todos os direitos reservados.
           </p>
+          <p>CNPJ 36.435.570/0001-51</p>
         </div>
       </div>
     </footer>

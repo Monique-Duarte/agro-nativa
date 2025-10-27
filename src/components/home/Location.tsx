@@ -11,13 +11,15 @@ export default function Location() {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
-              Venha nos Visitar!
-            </h2>
-            <p className="text-lg text-gray-600">
-              Estamos localizados no coração do Mar Grosso, prontos para
-              atender você e seu pet.
-            </p>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
+                Venha nos Visitar!
+              </h2>
+              <p className="text-lg text-gray-600">
+                Estamos localizados no Mar Grosso, prontos para
+                atender você e a sua família.
+              </p>
+            </div>
 
             <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
               <div>
@@ -54,7 +56,7 @@ export default function Location() {
                 </ul>
               </div>
             </div>
-
+            <div className="text-center md:text-base">
             <a
               href={googleMapsLink}
               target="_blank"
@@ -63,10 +65,11 @@ export default function Location() {
             >
               Ver no Google Maps
             </a>
+            </div>
           </div>
 
           {/* Coluna 2: Mapa Incorporado */}
-          <div className="overflow-hidden rounded-lg">
+          <div className="hidden md:flex overflow-hidden rounded-lg">
             <iframe
               src={embedMapLink}
               width="100%"

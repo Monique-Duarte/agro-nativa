@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Petshop() {
   const WHATSAPP_LINK =
@@ -20,12 +21,12 @@ export default function Petshop() {
       <main>
         <section className="bg-[#224724] py-8 text-white sm:py-24">
           <div className="container mx-auto max-w-7xl px-4 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
               Banho e Tosa com Carinho e Comodidade
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-            Oferecemos um banho realizado com carinho e produtos de qualidade,
-            pensando no bem-estar do seu pet. 
+            Nossos serviços são realizados com carinho e produtos de qualidade,
+            pensando no melhor para o seu pet. 
             </p>
           </div>
         </section>
@@ -35,7 +36,7 @@ export default function Petshop() {
           <div className="container mx-auto max-w-7xl px-4">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
-                Nossos Planos de Cuidado
+                Nossos planos de cuidado
               </h2>
               <p className="mt-4 text-lg text-gray-600">
                 Escolha a frequência ideal para seu pet e aproveite benefícios
@@ -45,7 +46,7 @@ export default function Petshop() {
 
             <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 mx-auto justify-items-center">
               <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm w-[80%]">
-                <img
+                <Image
                   src="/images/banho-pet.jpg"
                   alt="Cachorro salsicha tomando banho com espuma"
                   className="h-56 w-full object-cover rounded-t-lg"
@@ -75,7 +76,7 @@ export default function Petshop() {
               </div>
 
               <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm w-[80%]">
-                <img
+                <Image
                   src="/images/banho-pet2.jpg"
                   alt="Cachorro sorrindo na banheira com pato de borracha na cabeça"
                   className="h-56 w-full object-cover rounded-t-lg"
@@ -105,17 +106,13 @@ export default function Petshop() {
               </div>
             </div>
 
-            <p className="mt-6 text-center text-sm text-gray-500">
-              * Serviço de Leva e Traz não incluso nos planos (consultar valor e
-              área).
-            </p>
           </div>
         </section>
 
         <section className="bg-gray-50 py-4 sm:py-24">
-          <div className="container mx-auto max-w-6xl p-4 w-[80vw]">
-                <h2 className="text-3xl text-center font-bold mb-8 tracking-tight text-[#224724] sm:text-4xl">
-                  Vantagens Exclusivas dos Planos
+          <div className="container mx-auto max-w-6xl p-4 w-[90%] md:w-[80%]">
+                <h2 className="text-3xl text-center font-bold md:mb-8 tracking-tight text-[#224724] sm:text-4xl">
+                  Vantagens <strong>exclusivas</strong> dos planos
                 </h2>
                 
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
@@ -132,7 +129,7 @@ export default function Petshop() {
 
               {/* Coluna 2: Imagem da Parceria */}
               <div className="flex justify-center">
-                <img
+                <Image
                   src="/images/parceria-vital.png"
                   alt="Parceria AgroNativa e Hospital Veterinário Vital"
                   className="max-h-60 w-auto rounded-lg shadow-md"
@@ -194,7 +191,7 @@ export default function Petshop() {
 
         {/* Seção Banho Terapêutico */}
         <section className="py-8 sm:py-24">
-          <div className="container mx-auto max-w-7xl px-4">
+          <div className="container mx-auto max-w-7xl px-4 w-[90%]">
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
 
               <div className="space-y-6 md:col-start-1 md:row-start-1">
@@ -221,7 +218,7 @@ export default function Petshop() {
                   target="_blank"
                   className="inline-block rounded-full bg-[#224724] px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-[#9dd03a] hover:text-[#224724]"
                 >
-                  Saiba Mais sobre Banho Terapêutico
+                  Fale conosco
                 </Link>
               </div>
             </div>
