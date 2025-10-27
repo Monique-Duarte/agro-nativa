@@ -18,20 +18,20 @@ export default function Petshop() {
       </Head>
 
       <main>
-        <section className="bg-[#224724] py-16 text-white sm:py-24">
+        <section className="bg-[#224724] py-8 text-white sm:py-24">
           <div className="container mx-auto max-w-7xl px-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Banho e Tosa com Carinho e Comodidade
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Mantenha seu pet sempre limpo e cheiroso com nossos planos e
-              serviço de leva e traz.
+            Oferecemos um banho realizado com carinho e produtos de qualidade,
+            pensando no bem-estar do seu pet. 
             </p>
           </div>
         </section>
 
         {/* Seção Sobre os Planos */}
-        <section className="py-16 sm:py-24">
+        <section className="py-8 sm:py-24">
           <div className="container mx-auto max-w-7xl px-4">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
@@ -112,16 +112,14 @@ export default function Petshop() {
           </div>
         </section>
 
-        {/* Seção de Benefícios */}
-        <section className="bg-gray-50 py-16 sm:py-24">
-          <div className="container mx-auto max-w-7xl px-4">
-            {/* Grid para Título/Descrição + Imagem */}
-            <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-              {/* Coluna 1: Título e Descrição */}
-              <div className="text-center md:text-left">
-                <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
+        <section className="bg-gray-50 py-4 sm:py-24">
+          <div className="container mx-auto max-w-6xl p-4 w-[80vw]">
+                <h2 className="text-3xl text-center font-bold mb-8 tracking-tight text-[#224724] sm:text-4xl">
                   Vantagens Exclusivas dos Planos
                 </h2>
+                
+            <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+              <div className="text-center md:text-left jus">
                 <p className="mt-4 text-lg text-gray-600">
                   Mais do que banhos, um cuidado completo com a saúde do seu pet
                   em parceria com o{" "}
@@ -140,10 +138,11 @@ export default function Petshop() {
                   className="max-h-60 w-auto rounded-lg shadow-md"
                 />
               </div>
+              
             </div>
 
             {/* Lista de Benefícios (agora abaixo da imagem/título) */}
-            <ul className="mt-16 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+            <ul className="mt-8 grid grid-cols-1 gap-x-12 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
               <li className="flex items-start gap-x-3">
                 <CheckIcon className="mt-1 h-6 w-6 flex-none text-[#9dd03a]" />
                 <span>
@@ -194,7 +193,7 @@ export default function Petshop() {
         </section>
 
         {/* Seção Banho Terapêutico */}
-        <section className="py-16 sm:py-24">
+        <section className="py-8 sm:py-24">
           <div className="container mx-auto max-w-7xl px-4">
             <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
 
@@ -204,13 +203,13 @@ export default function Petshop() {
                 </h2>
                 <p className="text-lg text-gray-600">
                   Cuidado direcionado para pets com dermatites ou pele sensível,
-                  seguindo a indicação veterinária.
+                  seguindo as indicações veterinárias.
                 </p>
                 <p className="text-gray-600">
                   Você traz o shampoo específico prescrito pelo veterinário
                   responsável pelo tratamento do seu pet. Nós realizamos o banho
                   com todo o cuidado necessário, e você paga apenas pelo serviço
-                  de banho, levando o shampoo de volta para casa.
+                  de banho.
                 </p>
                 <p className="font-semibold text-[#224724]">
                   Essa abordagem garante um tratamento mais eficaz, específico

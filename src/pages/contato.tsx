@@ -19,7 +19,7 @@ export default function Contato() {
 
       <main>
         {/* Seção Hero de Contato */}
-        <section className="bg-[#224724] py-16 text-white sm:py-24">
+        <section className="bg-[#224724] py-8 text-white sm:py-24">
           <div className="container mx-auto max-w-7xl px-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
               Entre em Contato Conosco

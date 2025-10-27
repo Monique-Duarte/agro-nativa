@@ -28,7 +28,7 @@ export default function Footer() {
             </Link>
             <p className="text-sm">
               Agropecuária localizada no bairro Mar Grosso! <br />
-              Tudo para seu pet, jardim e piscina!
+              Tudo para seu pet, casa e jardim!
             </p>
             <div className="space-y-1 text-sm">
               <p>

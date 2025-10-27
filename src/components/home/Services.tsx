@@ -1,80 +1,61 @@
 import Link from "next/link";
+import Image from "next/image";
+
+const WHATSAPP_LINK_LEVA_E_TRAZ =
+  "https://api.whatsapp.com/send?phone=5548999557752&text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20serviço%20de%20leva%20e%20traz.";
 
 const serviceList = [
   {
-    title: 'Planos de Banho',
+    title: "Planos de Banho",
     description:
-      'Planos semanais (a partir de R$ 214,00) e quinzenais (a partir de R$ 121,00). Os valores são definidos conforme o porte e a raça.',
-    href: '/petshop',
+      "Entre em contato para encontrar o que melhor se adapta a necessidade do seu pet!",
+    href: "/petshop",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="h-8 w-8"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
-        />
-      </svg>
+      <Image
+        src="/images/petshoppb.png"
+        alt="Ícone de Petshop"
+        width={50}
+        height={50}
+        className="object-contain"
+      />
     ),
   },
   {
-    title: 'Leva e Traz',
+    title: "Leva e Traz",
     description:
-      'Para sua comodidade, buscamos e levamos seu pet para o banho com total segurança. Consulte a área de cobertura do nosso serviço.',
-    href: '/contato', // Pode ser o WhatsApp também
+      "Para sua comodidade, buscamos e levamos seu pet para o banho com total segurança. Consulte nossos serviços.",
+    href: WHATSAPP_LINK_LEVA_E_TRAZ,
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="h-8 w-8"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 013.375-3.375h1.5a1.125 1.125 0 011.125 1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v7.5c0 .621.504 1.125 1.125 1.125H5.25m13.5-9H18v.75c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125v-.75H21m-12-3h3.375c.621 0 1.125.504 1.125 1.125V12m-1.125 0c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125V9.75M9 12h3.375c.621 0 1.125.504 1.125 1.125V12m0 0c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125V9.75M9 12H6.375c-.621 0-1.125.504-1.125 1.125V12m0 0c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125V9.75M9 12v3M3 9v3m15-3v3"
-        />
-      </svg>
+      <Image
+        src="/images/transporte.png"
+        alt="Ícone de Petshop"
+        width={50}
+        height={50}
+        className="object-contain"
+      />
     ),
   },
   {
-    title: 'Banhos Terapêuticos',
+    title: "Banhos Terapêuticos",
     description:
-      'Cuidados especiais para pets com dermatite ou pele sensível. Utilizamos shampoos de tratamento para garantir a saúde e bem-estar.',
-    href: '/petshop',
+      "Cuidados especiais para pets com pele sensível. Tudo para garantir a saúde e bem-estar do seu parceiro.",
+    href: "/petshop",
     icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="h-8 w-8"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-        />
-      </svg>
+      <Image
+        src="/images/terapeutico.png"
+        alt="Ícone de Petshop"
+        width={50}
+        height={50}
+        className="object-contain"
+      />
     ),
   },
 ];
 
 export default function Services() {
   return (
-    // Usamos 'bg-gray-50' para dar um leve contraste com o resto da página
-    <section className="bg-gray-50 py-16 sm:py-24">
+    <section className="bg-gray-50 py-8 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4">
-        {/* Título da Seção */}
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
             Tudo para o seu Pet
@@ -91,7 +72,7 @@ export default function Services() {
               key={service.title}
               className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#9dd03a] text-[#224724]">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#9dd03a] text-[#224724]">
                 {service.icon}
               </div>
               <h3 className="mt-5 text-xl font-semibold text-[#224724]">
@@ -102,9 +83,15 @@ export default function Services() {
               </p>
               <Link
                 href={service.href}
+                {...(service.href.startsWith("http")
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="mt-4 inline-block font-medium text-[#224724] hover:text-[#9dd03a]"
               >
-                Saiba Mais &rarr;
+                {service.href.startsWith("http")
+                  ? "Fale Conosco"
+                  : "Saiba Mais"}{" "}
+                &rarr;
               </Link>
             </div>
           ))}

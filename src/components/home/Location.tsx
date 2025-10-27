@@ -1,5 +1,3 @@
-// src/components/home/Location.tsx
-
 export default function Location() {
   const googleMapsLink =
     'https://maps.app.goo.gl/3crepFaedKXPqjt19';
@@ -9,12 +7,10 @@ export default function Location() {
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.717145899997!2d-48.78443908491873!3d-28.49051808244199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95215c0e0b3c1b6b%3A0xe4a1f59265f2a1b1!2sAv.%20Jo%C3%A3o%20Pinho%2C%20483%20-%20Mar%20Grosso%2C%20Laguna%20-%20SC%2C%2088790-000!5e0!3m2!1spt-BR!2sbr!4v1678886543210!5m2!1spt-BR!2sbr';
 
   return (
-    // Seção com fundo branco
-    <section className="py-16 sm:py-24">
+    <section className="py-8 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Coluna 1: Informações de Contato */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
               Venha nos Visitar!
             </h2>
@@ -70,11 +66,11 @@ export default function Location() {
           </div>
 
           {/* Coluna 2: Mapa Incorporado */}
-          <div className="overflow-hidden rounded-lg shadow-lg">
+          <div className="overflow-hidden rounded-lg">
             <iframe
               src={embedMapLink}
               width="100%"
-              height="450" // Altura do mapa
+              height="450"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"

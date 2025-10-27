@@ -12,7 +12,7 @@ export default function Home() {
         <title>Agro Nativa: Petshop e Banho e Tosa em Laguna - SC</title>
         <meta
           name="description"
-          content="Tudo para seu pet, jardim e piscina no bairro Mar Grosso. Planos de banho e tosa com leva e traz."
+          content="Tudo para seu pet, casa e jardim no bairro Mar Grosso. Planos de banho e tosa com leva e traz."
         />
       </Head>
       
