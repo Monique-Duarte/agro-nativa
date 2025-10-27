@@ -23,6 +23,8 @@ export default function Footer() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logoBranco2.png"
+                width={120}
+                height={100}
                 alt="Logo Agro Nativa"
                 className="h-10 w-auto"
               />
@@ -53,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="hidden md:flex md:col-span-1 lg:col-span-1">
+          <div className="hidden md:block md:col-span-1 lg:col-span-1">
             <h3 className="text-lg font-semibold text-white">Navegação</h3>
             <ul className="mt-4 space-y-2">
               {navLinks.map((link) => (

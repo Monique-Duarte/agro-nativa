@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Image from "next/image";
 import { useState } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -12,7 +12,7 @@ const navLinks = [
 
 export default function Header() {
   const WHATSAPP_LINK =
-    'https://api.whatsapp.com/send?phone=5548999557752&text=Olá!%20Gostaria%20de%mais%20informações.';
+    'https://api.whatsapp.com/send?phone=5548999557752&text=Olá!%20Gostaria%20de%20agendar%20um%20banho.';
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -22,19 +22,23 @@ export default function Header() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-  }
+  };
 
   return (
-    <header className="top-0 z-40 w-full border-b border-gray-200 bg-white shadow-sm relative">
+    <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white shadow-sm">
       <div className="container mx-auto flex max-w-7xl items-center justify-between p-4">
         <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
           <Image
             src="/images/logoB.png"
             alt="Logo AgroNativa"
+            width={160}
+            height={48}
             className="h-12 w-auto"
+            priority
           />
         </Link>
 
+        {/* --- Navegação Desktop --- */}
         <nav className="hidden items-center space-x-6 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -54,6 +58,7 @@ export default function Header() {
           </Link>
         </nav>
 
+        {/* --- Botão de Menu Mobile --- */}
         <div className="md:hidden">
           <button
             onClick={toggleMobileMenu}
@@ -70,26 +75,29 @@ export default function Header() {
         </div>
       </div>
 
+      {/* --- Menu Mobile Fixo na Parte Inferior --- */}
       {isMobileMenuOpen && (
-        <div className="absolute left-0 w-full bg-white shadow-md md:hidden z-30 border-t border-gray-200">
-          <nav className="flex flex-col space-y-1 px-4 py-4">
+        <div className="fixed inset-x-0 top-16 z-50 w-full bg-white shadow-lg md:hidden">
+          <nav className="flex justify-around py-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-[#224724]"
+                className="flex flex-col items-center justify-center rounded-md p-2 text-xs font-medium text-gray-800 hover:bg-gray-100 hover:text-[#224724]"
                 onClick={closeMobileMenu}
               >
-                {link.name}
+                <span>{link.name}</span>
               </Link>
             ))}
+
             <Link
               href={WHATSAPP_LINK}
               target="_blank"
-              className="mt-4 block w-full rounded-full bg-[#224724] px-5 py-2 text-center text-sm font-medium text-white shadow-sm hover:bg-[#9dd03a] hover:text-[#224724]"
+              className="flex flex-col items-center justify-center rounded-md p-2 text-xs font-medium text-white bg-[#224724] hover:bg-[#9dd03a] hover:text-[#224724]"
               onClick={closeMobileMenu}
             >
-              Entrar em contato
+              <ChatBubbleOvalLeftEllipsisIcon className="h-5 w-5 mb-1" />
+              <span>Fale conosco</span>
             </Link>
           </nav>
         </div>

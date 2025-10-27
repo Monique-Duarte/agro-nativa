@@ -9,9 +9,7 @@ export default function Petshop() {
   return (
     <>
       <Head>
-        <title>
-          Planos de Banho e Tosa com Leva e Traz | AgroNativa Laguna
-        </title>
+          <title>Petshop e Planos de Banho e Tosa | AgroNativa Laguna</title>
         <meta
           name="description"
           content="Planos semanais e quinzenais de banho e tosa para cães e gatos em Laguna/SC. Inclui benefícios exclusivos e serviço de leva e traz."
@@ -49,6 +47,8 @@ export default function Petshop() {
                 <Image
                   src="/images/banho-pet.jpg"
                   alt="Cachorro salsicha tomando banho com espuma"
+                  width={100}
+                  height={100}
                   className="h-56 w-full object-cover rounded-t-lg"
                 />
                 <div className="p-6">
@@ -79,6 +79,8 @@ export default function Petshop() {
                 <Image
                   src="/images/banho-pet2.jpg"
                   alt="Cachorro sorrindo na banheira com pato de borracha na cabeça"
+                  width={100}
+                  height={100}
                   className="h-56 w-full object-cover rounded-t-lg"
                 />
                 <div className="p-6">
@@ -133,6 +135,8 @@ export default function Petshop() {
                   src="/images/parceria-vital.png"
                   alt="Parceria AgroNativa e Hospital Veterinário Vital"
                   className="max-h-60 w-auto rounded-lg shadow-md"
+                  width={100}
+                  height={100}
                 />
               </div>
               

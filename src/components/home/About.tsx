@@ -23,6 +23,8 @@ export default function About() {
             <Image
               src="/images/AgroNativa.png"
               alt="Furgão da Agro Nativa"
+              width={200}
+              height={200}
               className="h-full w-full rounded-2xl object-cover shadow-xl"
             />
           </div>

@@ -9,6 +9,8 @@ export default function Hero() {
     <section className="relative flex h-[60vh] min-h-[400px] items-center justify-center text-center text-white">
       <Image
         src="/images/hero-van.png"
+        width={100}
+        height={400}
         alt="Van da AgroNativa leva e traz"
         className="absolute inset-0 h-full w-full object-cover"
       />
