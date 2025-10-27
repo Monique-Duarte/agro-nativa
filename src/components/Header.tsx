@@ -2,7 +2,6 @@ import Link from 'next/link';
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Banho e Tosa', href: '/banho-e-tosa' },
   { name: 'Petshop', href: '/petshop' },
   { name: 'A Loja', href: '/a-loja' },
   { name: 'Contato', href: '/contato' },

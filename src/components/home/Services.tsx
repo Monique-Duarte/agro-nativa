@@ -5,7 +5,7 @@ const serviceList = [
     title: 'Planos de Banho',
     description:
       'Planos semanais (a partir de R$ 214,00) e quinzenais (a partir de R$ 121,00). Os valores são definidos conforme o porte e a raça.',
-    href: '/banho-e-tosa',
+    href: '/petshop',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const serviceList = [
     title: 'Banhos Terapêuticos',
     description:
       'Cuidados especiais para pets com dermatite ou pele sensível. Utilizamos shampoos de tratamento para garantir a saúde e bem-estar.',
-    href: '/banho-e-tosa',
+    href: '/petshop',
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

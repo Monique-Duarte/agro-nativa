@@ -96,8 +96,8 @@ export default function StoreCategories() {
             Uma Loja Completa para seu Lar
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Além do Petshop, temos tudo o que você precisa para seu jardim,
-            piscina e casa.
+            Petshop, temos tudo o que você precisa para seu jardim,
+            casa e piscina.
           </p>
         </div>
 
