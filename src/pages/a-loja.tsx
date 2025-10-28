@@ -34,12 +34,12 @@ const categoriesData: Category[] = [
     brands: [
       { id: 'racao-formulanatural', name: 'Fórmula Natural', logoUrl: '/images/logos/formulanatural.webp', petType: 'Ambos' },
       { id: 'racao-premier', name: 'Premier Pet', logoUrl: '/images/logos/premier.webp', petType: 'Ambos', subBrands: [
-        { id: 'racao-premier-premier', name: 'Premier Raças/Ambientes', logoUrl: '/images/logos/premierpet.webp', petType: 'Ambos', description: 'Linhas Super Premium específicas para raças, portes e ambientes internos.' },
-        { id: 'racao-premier-golden', name: 'Golden Seleção Natural/Fórmula', logoUrl: '/images/logos/golden.webp', petType: 'Ambos', description: 'Linhas Premium Especial com ingredientes selecionados e ótimo custo-benefício.' }
+        { id: 'racao-premier-premier', name: 'Premier', logoUrl: '/images/logos/premierpet.webp', petType: 'Ambos', description: 'Ração Super Premium' },
+        { id: 'racao-premier-golden', name: 'Golden', logoUrl: '/images/logos/golden.webp', petType: 'Ambos', description: 'Ração Premium' }
       ]},
       { id: 'racao-guabi', name: 'Guabi Natural', logoUrl: '/images/logos/guabi.webp', petType: 'Ambos' },
-      { id: 'racao-royal', name: 'Royal Canin', logoUrl: '/images/logos/royal.webp', petType: 'Ambos', description: 'Nutrição sob medida para raças, portes, idades e condições específicas.'},
-      { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.png', petType: 'Ambos' },
+      { id: 'racao-royal', name: 'Royal Canin', logoUrl: '/images/logos/royal.webp', petType: 'Ambos', description: 'Nutrição sob medida.'},
+      { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos' },
       { id: 'racao-palatto', name: 'Pet Palatto', logoUrl: '/images/logos/pet-palatto.webp', petType: 'Ambos' },
       { id: 'racao-premiatta', name: 'Whey HD Premiatta', logoUrl: '/images/logos/premiatta.webp', petType: 'Cão' },
     ],
@@ -49,35 +49,38 @@ const categoriesData: Category[] = [
     description: 'Proteja seu pet contra parasitas com soluções eficazes e seguras, desde comprimidos mensais até coleiras de longa duração.',
     brands: [
       { id: 'ap-bravecto', name: 'Bravecto', logoUrl: '/images/logos/bravecto.webp', petType: 'Ambos', subBrands: [
-        { id: 'ap-bravecto-caes-1', name: 'Bravecto Cães - De 2 a 4,5kg', logoUrl: '/images/logos/Bravecto-cao1.webp', petType: 'Cão', description: '1 comprimido mastigável = 12 semanas de proteção (Pulgas/Carrapatos).' },
-        { id: 'aap-bravecto-caes-2', name: 'Bravecto Cães - De 4,5 a 10kg', logoUrl: '/images/logos/Bravecto-cao2.webp', petType: 'Cão', description: '1 comprimido mastigável = 12 semanas de proteção (Pulgas/Carrapatos).' },
-        { id: 'ap-bravecto-caes-3', name: 'Bravecto Cães - De 10 a 20kg', logoUrl: '/images/logos/Bravecto-cao3.webp', petType: 'Cão', description: '1 comprimido mastigável = 12 semanas de proteção (Pulgas/Carrapatos).' },
-        { id: 'ap-bravecto-caes-4', name: 'Bravecto Cães - De 20 a 40kg', logoUrl: '/images/logos/Bravecto-cao4.webp', petType: 'Cão', description: '1 comprimido mastigável = 12 semanas de proteção (Pulgas/Carrapatos).' },
-        { id: 'ap-bravecto-caes-5', name: 'Bravecto Cães - De 40 a 56kg', logoUrl: '/images/logos/Bravecto-cao5.webp', petType: 'Cão', description: '1 comprimido mastigável = 12 semanas de proteção (Pulgas/Carrapatos).' }, 
-
-        { id: 'ap-bravecto-gatos-1', name: 'Bravecto Gatos - De 1,2 a 2,8kg', logoUrl: '/images/logos/bravecto-gato1.webp', petType: 'Gato', description: 'Aplicação tópica para gatos, 12 semanas de proteção.' },
-        { id: 'ap-bravecto-gatos-2', name: 'Bravecto Gatos - De 2,8 a 6,25kg', logoUrl: '/images/logos/bravecto-gato2.webp', petType: 'Gato', description: 'Aplicação tópica, dura 12 semanas.' },
-        { id: 'ap-bravecto-gatos-3', name: 'Bravecto Gatos - De 6,25k a 12,5g', logoUrl: '/images/logos/bravecto-gato3.webp', petType: 'Gato', description: 'Aplicação tópica, dura 12 semanas.' },
-        { id: 'ap-bravecto-gatos-plus', name: 'Bravecto Gatos Plus - De 2,8k a 6,25g', logoUrl: '/images/logos/bravecto-gato-plus.webp', petType: 'Gato', description: 'Aplicação tópica, dura 12 semanas. Combate pulgas, sarna de ouvido e vermes' },
+        { id: 'ap-bravecto-c1', name: 'Bravecto Cães (2 a 4,5kg)', logoUrl: '/images/logos/Bravecto-cao1.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
+        { id: 'ap-bravecto-c2', name: 'Bravecto Cães (4,5 a 10kg)', logoUrl: '/images/logos/Bravecto-cao2.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
+        { id: 'ap-bravecto-c3', name: 'Bravecto Cães (10 a 20kg)', logoUrl: '/images/logos/Bravecto-cao3.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
+        { id: 'ap-bravecto-c4', name: 'Bravecto Cães (20 a 40kg)', logoUrl: '/images/logos/Bravecto-cao4.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
+        { id: 'ap-bravecto-c5', name: 'Bravecto Cães (40 a 56kg)', logoUrl: '/images/logos/Bravecto-cao5.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
+        { id: 'ap-bravecto-g1', name: 'Bravecto Gatos (1,2 a 2,8kg)', logoUrl: '/images/logos/bravecto-gato1.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
+        { id: 'ap-bravecto-g2', name: 'Bravecto Gatos (2,8 a 6,25kg)', logoUrl: '/images/logos/bravecto-gato2.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
+        { id: 'ap-bravecto-g3', name: 'Bravecto Gatos (6,25 a 12,5kg)', logoUrl: '/images/logos/bravecto-gato3.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
+        { id: 'ap-bravecto-gplus', name: 'Bravecto Plus Gatos', logoUrl: '/images/logos/bravecto-gato-plus.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas, sarna otodécica e vermes. Aplicação tópica.' },
       ]},
       { id: 'ap-nexgard', name: 'NexGard', logoUrl: '/images/logos/logo-nexgard.webp', petType: 'Ambos', subBrands: [
-        { id: 'ap-nexgard-caes', name: 'Nexgard Cães', logoUrl: '/images/logos/nexgard_caes.webp', petType: 'Cão', description: 'Comprimido mastigável mensal contra pulgas e carrapatos.' },
-        { id: 'ap-nexgard-gatos1', name: 'Nexgard Combo Gatos. De 0,8 a 2,5kg', logoUrl: '/images/logos/nexgard-gatos1.webp', petType: 'Gato', description: 'Aplicação tópica mensal contra pulgas, carrapatos e vermes.' },
-        { id: 'ap-nexgard-gatos2', name: 'Nexgard Combo Gatos. De 2,5kg a 7,5kg', logoUrl: '/images/logos/nexgard-gatos2.webp', petType: 'Gato', description: 'Aplicação tópica mensal, combate pulgas, sarna de ouvido e vermes.' },
-        { id: 'ap-nexgard-spectra', name: 'Nexgard Spectra Cães', logoUrl: '/images/logos/nexgard_spectra.webp', petType: 'Cão', description: 'Comprimido mastigável mensal completo (pulgas, carrapatos, vermes).' }
+        { id: 'ap-nexgard-caes', name: 'Nexgard Cães', logoUrl: '/images/logos/nexgard_caes.webp', petType: 'Cão', description: 'Proteção mensal contra pulgas e carrapatos. Comprimido mastigável mensal.' },
+        { id: 'ap-nexgard-gatos', name: 'Nexgard Combo Gatos', logoUrl: '/images/logos/nexgard-gatos2.webp', petType: 'Gato', description: 'Proteção mensal contra pulgas, sarna e vermes. Aplicação tópica mensal.' },
       ]},
-      { id: 'ap-defenza', name: 'Defenza (cães)', logoUrl: '/images/logos/defenza.webp', petType: 'Cão', description: 'Comprimido para cães, proteção contra pulgas e carrapatos por até 35 dias.' },
-      { id: 'ap-seresto', name: 'Coleira Seresto', logoUrl: '/images/logos/seresto.webp', petType: 'Ambos', description: 'Coleira que protege cães e gatos contra pulgas e carrapatos por até 8 meses.' },
+
+      { id: 'ap-nexgardSpectra', name: 'NexGard Spectra', logoUrl: '/images/logos/NexGardSpectra.webp', petType: 'Cão', subBrands: [
+        { id: 'ap-nexgard-spectra', name: 'Nexgard Spectra Cães', logoUrl: '/images/logos/nexgard_spectra.webp', petType: 'Cão', description: 'Proteção mensal contra pulgas, carrapatos, sarna e vermes. Comprimido mastigável, protege por 30 dias.' },
+      ]},
+
+
+      { id: 'ap-defenza', name: 'Defenza (cães)', logoUrl: '/images/logos/defenza.webp', petType: 'Cão', description: 'Comprimido para cães (35 dias).' },
+      { id: 'ap-seresto', name: 'Coleira Seresto', logoUrl: '/images/logos/seresto.webp', petType: 'Ambos', description: 'Coleira (cães e gatos) (até 8 meses).' },
     ],
   },
-  {
+   {
     name: 'Saúde Pet: Vermífugos',
     description: 'Mantenha a saúde intestinal do seu cão ou gato em dia com vermífugos de amplo espectro recomendados por veterinários.',
     brands: [
-      { id: 'verm-endogard', name: 'Endogard', logoUrl: '/images/logos/endogard.webp', petType: 'Cão', description: 'Vermífugo de amplo espectro para cães.' },
+      { id: 'verm-endogard', name: 'Endogard', logoUrl: '/images/logos/Endogard.webp', petType: 'Cão', description: 'Vermífugo de amplo espectro para cães.' },
       { id: 'verm-vetmax', name: 'Vetmax', logoUrl: '/images/logos/vetmax.webp', petType: 'Ambos', description: 'Vermífugo oral para cães e gatos.' },
       { id: 'verm-drontal', name: 'Drontal', logoUrl: '/images/logos/drontal.webp', petType: 'Ambos', subBrands: [
-         { id: 'verm-drontal-caes', name: 'Drontal Plus Cães', logoUrl: '/images/logos/drontal.webp', petType: 'Cão', description: 'Vermífugo completo para cães.' }, // Ajuste logo se tiver específico
+         { id: 'verm-drontal-caes', name: 'Drontal Plus Cães', logoUrl: '/images/logos/drontal.webp', petType: 'Cão', description: 'Vermífugo completo para cães.' },
          { id: 'verm-drontal-gatos', name: 'Drontal Gatos', logoUrl: '/images/logos/drontal-gatos.webp', petType: 'Gato', description: 'Vermífugo eficaz para gatos.' }
       ]},
     ],
@@ -86,9 +89,8 @@ const categoriesData: Category[] = [
     name: 'Conforto',
     description: 'Caminhas, colchonetes e mantas para garantir o descanso e o conforto que seu melhor amigo merece.',
     brands: [
-        { id: 'conforto-cama1', name: 'Bicho com Luxo', logoUrl: '/images/logos/bichoComLuxo.webp', petType: 'Ambos', description: 'Caminhas confortáveis e estilosas.' },
-        { id: 'conforto-tapete1', name: 'Tapete Higiênico B', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Tapete+B', petType: 'Ambos', description: 'Alta absorção para manter a casa limpa.' },
-        // Adicione mais marcas reais aqui
+        { id: 'conforto-bichocomluxo', name: 'Bicho com Luxo', logoUrl: '/images/logos/bichoComLuxo.webp', petType: 'Ambos', description: 'Caminhas confortáveis e estilosas.' },
+        { id: 'conforto-tapeteexemplo', name: 'Tapete Higiênico Exemplo', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Tapete+H', petType: 'Ambos', description: 'Alta absorção para manter a casa limpa.' },
     ],
   },
    {
@@ -98,7 +100,6 @@ const categoriesData: Category[] = [
        { id: 'brinquedo-kong', name: 'Kong', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Kong', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
        { id: 'brinquedo-petstages', name: 'Petstages', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Petstages', petType: 'Ambos', description: 'Brinquedos inovadores para cães e gatos.' },
        { id: 'brinquedo-buddytoys', name: 'Buddy Toys', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Buddy+Toys', petType: 'Ambos', description: 'Mordedores resistentes e divertidos.' },
-        // Adicione mais marcas reais aqui
     ],
   },
   {
@@ -108,7 +109,6 @@ const categoriesData: Category[] = [
        { id: 'acessorios-zeedog', name: 'Zee.Dog', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=ZeeDog', petType: 'Ambos', description: 'Design e qualidade em coleiras, guias e peitorais.' },
        { id: 'acessorios-chalesco', name: 'Chalesco', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Chalesco', petType: 'Ambos', description: 'Grande variedade de acessórios práticos.' },
        { id: 'acessorios-furacao', name: 'Furacão Pet', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Furacão', petType: 'Ambos', description: 'Caixas de transporte, comedouros e mais.' },
-        // Adicione mais marcas reais aqui
     ],
   },
 ];
@@ -118,8 +118,15 @@ export default function ALoja() {
   const [activePetFilter, setActivePetFilter] = useState<'Todos' | 'Cão' | 'Gato'>('Todos');
   const [expandedBrandId, setExpandedBrandId] = useState<string | null>(null);
 
+  const handleFilterChange = (filter: 'Todos' | 'Cão' | 'Gato') => {
+    setActivePetFilter(filter);
+    setExpandedBrandId(null);
+  };
+
   const toggleExpand = (brandId: string) => {
-    setExpandedBrandId(expandedBrandId === brandId ? null : brandId);
+    if (window.innerWidth >= 768) {
+       setExpandedBrandId(expandedBrandId === brandId ? null : brandId);
+    }
   };
 
   const filteredCategories = categoriesData.map(category => ({
@@ -131,7 +138,7 @@ export default function ALoja() {
         brand.petType === 'Ambos' ||
         (brand.subBrands && brand.subBrands.some(sub => sub.petType === activePetFilter || sub.petType === 'Ambos'))
       )
-      .map(brand => ({ 
+      .map(brand => ({
         ...brand,
         subBrands: brand.subBrands?.filter(sub =>
           activePetFilter === 'Todos' || sub.petType === activePetFilter || sub.petType === 'Ambos'
@@ -158,12 +165,13 @@ export default function ALoja() {
           </div>
         </section>
 
+        {/* Filtros Cão / Gato / Todos */}
         <section className="sticky top-16 z-20 border-b border-gray-200 bg-gray-100 py-4 sm:top-[72px]">
           <div className="container mx-auto flex max-w-7xl justify-center space-x-2 px-4 sm:space-x-4">
             {(['Todos', 'Cão', 'Gato'] as const).map((filterType) => (
               <button
                 key={filterType}
-                onClick={() => setActivePetFilter(filterType)}
+                onClick={() => handleFilterChange(filterType)}
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-200 sm:px-6 sm:py-2 ${
                   activePetFilter === filterType
                     ? 'bg-[#9dd03a] text-[#224724] shadow-md ring-2 ring-[#224724] ring-offset-1'
@@ -176,7 +184,7 @@ export default function ALoja() {
           </div>
         </section>
 
-
+        {/* Seção das Categorias */}
         <section className="py-16 sm:py-24">
           <div className="container mx-auto max-w-7xl space-y-16 px-4">
             {filteredCategories.length === 0 && (
@@ -199,14 +207,19 @@ export default function ALoja() {
                     <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
                       {category.brands.map((brand) => (
                         <div key={brand.id} className="relative">
-                          <button
-                            onClick={() => brand.subBrands && brand.subBrands.length > 0 && toggleExpand(brand.id)}
-                            className={`group flex h-28 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1
-                                        ${expandedBrandId === brand.id ? 'border-[#9dd03a] shadow-lg' : 'border-transparent hover:border-[#9dd03a] hover:shadow-lg'} // Borda transparente por padrão, verde no hover/ativo
-                                        ${(!brand.subBrands || brand.subBrands.length === 0) ? 'cursor-default' : 'cursor-pointer'}`}
-                            disabled={!brand.subBrands || brand.subBrands.length === 0}
-                            aria-expanded={expandedBrandId === brand.id}
-                            aria-controls={`sub-brands-${brand.id}`}
+                          <div
+                            {...(brand.subBrands && brand.subBrands.length > 0 ? {
+                                 className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1
+                                            ${expandedBrandId === brand.id ? 'border-[#9dd03a] shadow-lg' : 'border-transparent hover:border-[#9dd03a] hover:shadow-lg'}
+                                            md:cursor-pointer`,
+                                 onClick: () => toggleExpand(brand.id),
+                                 role: "button",
+                                 tabIndex: 0,
+                                 'aria-expanded': expandedBrandId === brand.id,
+                                 'aria-controls': `sub-brands-${brand.id}`
+                            } : {
+                                className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out border-transparent hover:border-[#9dd03a] hover:shadow-lg cursor-default`
+                            })}
                           >
                             <div className="flex h-[80%] w-full items-center justify-center">
                               <Image
@@ -220,27 +233,26 @@ export default function ALoja() {
                                {brand.name.includes('(') ? brand.name.split(' (')[0] : brand.name}
                             </span>
                              {brand.subBrands && brand.subBrands.length > 0 && (
-                               <span className="absolute bottom-1 right-1 text-gray-400 group-hover:text-[#224724]">
+                               <span className="absolute bottom-1 right-1 hidden text-gray-400 group-hover:text-[#224724] md:block">
                                    {expandedBrandId === brand.id ? ( <ChevronUpIcon className="h-4 w-4" /> ) : ( <ChevronDownIcon className="h-4 w-4" /> )}
                                </span>
                              )}
-                          </button>
+                          </div>
 
                           {expandedBrandId === brand.id && brand.subBrands && brand.subBrands.length > 0 && (
                             <div
                               id={`sub-brands-${brand.id}`}
-                              className="absolute left-0 z-20 mt-1 w-full max-w-sm transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:w-[300%] lg:max-w-md xl:max-w-lg"
+                              className="absolute left-0 z-20 mt-1 hidden w-full max-w-sm transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:block md:w-[300%] lg:max-w-md xl:max-w-lg animate-fade-in"
                             >
                               <h4 className="mb-3 border-b pb-2 text-base font-bold text-[#224724]">Linhas / Produtos {brand.name}:</h4>
-                              <div className="max-h-60 space-y-6 overflow-y-auto"> 
-                                {brand.subBrands 
-                                  .map((subBrand) => (
+                              <div className="max-h-60 space-y-3 overflow-y-auto pr-2">
+                                {brand.subBrands.map((subBrand) => (
                                     <div key={subBrand.id} className="flex items-start space-x-3 border-b pb-2 last:border-b-0">
-                                      <div className="flex h-22 w-16 shrink-0 items-center justify-center rounded border p-1">
+                                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded border p-1">
                                         <Image
                                           src={subBrand.logoUrl}
                                           alt={`Logo ${subBrand.name}`}
-                                          width={50} height={90}
+                                          width={90} height={60}
                                           className="object-contain"
                                         />
                                       </div>
@@ -251,7 +263,7 @@ export default function ALoja() {
                                         )}
                                       </div>
                                     </div>
-                                ))}
+                                  ))}
                                 {brand.subBrands.length === 0 && (
                                    <p className="text-sm text-gray-500 italic">Nenhuma linha encontrada para "{activePetFilter}".</p>
                                 )}
@@ -289,5 +301,3 @@ export default function ALoja() {
     </>
   );
 }
-
-// Não se esqueça de adicionar a animação 'fadeIn' no seu tailwind.config.ts se quiser usar
