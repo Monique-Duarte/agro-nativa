@@ -70,7 +70,7 @@ const categoriesData: Category[] = [
 
 
       { id: 'ap-defenza', name: 'Defenza (cães)', logoUrl: '/images/logos/defenza.webp', petType: 'Cão', description: 'Comprimido para cães (35 dias).' },
-      { id: 'ap-seresto', name: 'Coleira Seresto', logoUrl: '/images/logos/seresto.webp', petType: 'Ambos', description: 'Coleira (cães e gatos) (até 8 meses).' },
+      { id: 'ap-seresto', name: 'Coleira Seresto', logoUrl: '/images/logos/Seresto.webp', petType: 'Ambos', description: 'Coleira protetora para cães e gatos, protege contra pulga e carrapato por até 8 meses.' },
     ],
   },
    {
