@@ -189,7 +189,7 @@ export default function ALoja() {
           <div className="container mx-auto max-w-7xl space-y-16 px-4">
             {filteredCategories.length === 0 && (
                  <div className="text-center p-8 text-gray-600 text-xl italic">
-                     Nenhum produto encontrado para o filtro "{activePetFilter}".
+                     Nenhum produto encontrado para o filtro &quot;{activePetFilter}&quot;.
                  </div>
             )}
             {filteredCategories.map((category, index) => (
@@ -265,7 +265,7 @@ export default function ALoja() {
                                     </div>
                                   ))}
                                 {brand.subBrands.length === 0 && (
-                                   <p className="text-sm text-gray-500 italic">Nenhuma linha encontrada para "{activePetFilter}".</p>
+                                  <p className="text-sm text-gray-500 italic">Nenhuma linha encontrada para o filtro &quot;{activePetFilter}&quot;.</p>
                                 )}
                               </div>
                             </div>
