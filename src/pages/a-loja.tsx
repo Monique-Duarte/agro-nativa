@@ -58,11 +58,12 @@ const categoriesData: Category[] = [
         { id: 'ap-bravecto-gatos-1', name: 'Bravecto Gatos - De 1,2 a 2,8kg', logoUrl: '/images/logos/bravecto-gato1.webp', petType: 'Gato', description: 'Aplicação tópica para gatos, 12 semanas de proteção.' },
         { id: 'ap-bravecto-gatos-2', name: 'Bravecto Gatos - De 2,8 a 6,25kg', logoUrl: '/images/logos/bravecto-gato2.webp', petType: 'Gato', description: 'Aplicação tópica, dura 12 semanas.' },
         { id: 'ap-bravecto-gatos-3', name: 'Bravecto Gatos - De 6,25k a 12,5g', logoUrl: '/images/logos/bravecto-gato3.webp', petType: 'Gato', description: 'Aplicação tópica, dura 12 semanas.' },
-        { id: 'ap-bravecto-gatos-plus', name: 'Bravecto Gatos Plus - De 2,8k a 6,25g', logoUrl: '/images/logos/bravecto-gato-plus.webp', petType: 'Gato', description: 'Aplicação tópica (Pulgas, Carrapatos, Vermes e sarna), dura 12 semanas.' },
+        { id: 'ap-bravecto-gatos-plus', name: 'Bravecto Gatos Plus - De 2,8k a 6,25g', logoUrl: '/images/logos/bravecto-gato-plus.webp', petType: 'Gato', description: 'Aplicação tópica, dura 12 semanas. Combate pulgas, sarna de ouvido e vermes' },
       ]},
       { id: 'ap-nexgard', name: 'NexGard', logoUrl: '/images/logos/logo-nexgard.webp', petType: 'Ambos', subBrands: [
         { id: 'ap-nexgard-caes', name: 'Nexgard Cães', logoUrl: '/images/logos/nexgard_caes.webp', petType: 'Cão', description: 'Comprimido mastigável mensal contra pulgas e carrapatos.' },
-        { id: 'ap-nexgard-gatos', name: 'Nexgard Combo Gatos', logoUrl: '/images/logos/nexgard_gatos.webp', petType: 'Gato', description: 'Aplicação tópica mensal contra pulgas, carrapatos e vermes.' },
+        { id: 'ap-nexgard-gatos1', name: 'Nexgard Combo Gatos. De 0,8 a 2,5kg', logoUrl: '/images/logos/nexgard-gatos1.webp', petType: 'Gato', description: 'Aplicação tópica mensal contra pulgas, carrapatos e vermes.' },
+        { id: 'ap-nexgard-gatos2', name: 'Nexgard Combo Gatos. De 2,5kg a 7,5kg', logoUrl: '/images/logos/nexgard-gatos2.webp', petType: 'Gato', description: 'Aplicação tópica mensal, combate pulgas, sarna de ouvido e vermes.' },
         { id: 'ap-nexgard-spectra', name: 'Nexgard Spectra Cães', logoUrl: '/images/logos/nexgard_spectra.webp', petType: 'Cão', description: 'Comprimido mastigável mensal completo (pulgas, carrapatos, vermes).' }
       ]},
       { id: 'ap-defenza', name: 'Defenza (cães)', logoUrl: '/images/logos/defenza.webp', petType: 'Cão', description: 'Comprimido para cães, proteção contra pulgas e carrapatos por até 35 dias.' },
@@ -200,9 +201,9 @@ export default function ALoja() {
                         <div key={brand.id} className="relative">
                           <button
                             onClick={() => brand.subBrands && brand.subBrands.length > 0 && toggleExpand(brand.id)}
-                            className={`group flex h-36 w-full flex-col items-center justify-center rounded-md border bg-white p-2 text-center transition duration-300 ease-in-out hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1
-                                        ${expandedBrandId === brand.id ? 'border-[#9dd03a] shadow-lg grayscale-0' : 'border-gray-200 grayscale hover:grayscale-0'}
-                                        ${(!brand.subBrands || brand.subBrands.length === 0) ? 'cursor-default grayscale hover:grayscale-0' : 'cursor-pointer'}`}
+                            className={`group flex h-28 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1
+                                        ${expandedBrandId === brand.id ? 'border-[#9dd03a] shadow-lg' : 'border-transparent hover:border-[#9dd03a] hover:shadow-lg'} // Borda transparente por padrão, verde no hover/ativo
+                                        ${(!brand.subBrands || brand.subBrands.length === 0) ? 'cursor-default' : 'cursor-pointer'}`}
                             disabled={!brand.subBrands || brand.subBrands.length === 0}
                             aria-expanded={expandedBrandId === brand.id}
                             aria-controls={`sub-brands-${brand.id}`}
@@ -228,18 +229,18 @@ export default function ALoja() {
                           {expandedBrandId === brand.id && brand.subBrands && brand.subBrands.length > 0 && (
                             <div
                               id={`sub-brands-${brand.id}`}
-                              className="absolute left-1/2 z-20 mt-1 w-[200%] max-w-sm -translate-x-1/2 transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:w-[300%] lg:max-w-md xl:max-w-lg"
+                              className="absolute left-0 z-20 mt-1 w-full max-w-sm transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:w-[300%] lg:max-w-md xl:max-w-lg"
                             >
                               <h4 className="mb-3 border-b pb-2 text-base font-bold text-[#224724]">Linhas / Produtos {brand.name}:</h4>
-                              <div className="max-h-60 space-y-3 overflow-y-auto"> 
+                              <div className="max-h-60 space-y-6 overflow-y-auto"> 
                                 {brand.subBrands 
                                   .map((subBrand) => (
                                     <div key={subBrand.id} className="flex items-start space-x-3 border-b pb-2 last:border-b-0">
-                                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded border p-1">
+                                      <div className="flex h-22 w-16 shrink-0 items-center justify-center rounded border p-1">
                                         <Image
                                           src={subBrand.logoUrl}
                                           alt={`Logo ${subBrand.name}`}
-                                          width={90} height={60}
+                                          width={50} height={90}
                                           className="object-contain"
                                         />
                                       </div>
