@@ -45,7 +45,7 @@ export default function Petshop() {
             <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 mx-auto justify-items-center">
               <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm w-[80%]">
                 <Image
-                  src="/images/banho-pet.jpg"
+                  src="/images/banho-pet.webp"
                   alt="Cachorro salsicha tomando banho com espuma"
                   width={100}
                   height={100}
@@ -77,7 +77,7 @@ export default function Petshop() {
 
               <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm w-[80%]">
                 <Image
-                  src="/images/banho-pet2.jpg"
+                  src="/images/banho-pet2.webp"
                   alt="Cachorro sorrindo na banheira com pato de borracha na cabeça"
                   width={100}
                   height={100}
@@ -132,7 +132,7 @@ export default function Petshop() {
               {/* Coluna 2: Imagem da Parceria */}
               <div className="flex justify-center">
                 <Image
-                  src="/images/parceria-vital.png"
+                  src="/images/parceria-vital.webp"
                   alt="Parceria AgroNativa e Hospital Veterinário Vital"
                   className="max-h-60 w-auto rounded-lg shadow-md"
                   width={100}
