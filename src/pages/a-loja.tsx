@@ -10,6 +10,7 @@ interface SubBrand {
   logoUrl: string;
   petType?: 'Cão' | 'Gato' | 'Ambos';
   description?: string;
+  link?: string;
 }
 
 interface Brand {
@@ -19,6 +20,7 @@ interface Brand {
   petType?: 'Cão' | 'Gato' | 'Ambos';
   subBrands?: SubBrand[];
   description?: string;
+  link?: string;
 }
 
 interface Category {
@@ -28,20 +30,20 @@ interface Category {
 }
 
 const categoriesData: Category[] = [
-  {
+    {
     name: 'Rações',
     description: 'Trabalhamos com as melhores marcas de rações secas, úmidas, suplementos e medicamentosas para garantir a nutrição ideal para o seu pet de todas as idades.',
     brands: [
-      { id: 'racao-formulanatural', name: 'Fórmula Natural', logoUrl: '/images/logos/formulanatural.webp', petType: 'Ambos' },
-      { id: 'racao-premier', name: 'Premier Pet', logoUrl: '/images/logos/premier.webp', petType: 'Ambos', subBrands: [
-        { id: 'racao-premier-premier', name: 'Premier', logoUrl: '/images/logos/premierpet.webp', petType: 'Ambos', description: 'Ração Super Premium' },
-        { id: 'racao-premier-golden', name: 'Golden', logoUrl: '/images/logos/golden.webp', petType: 'Ambos', description: 'Ração Premium' }
-      ]},
-      { id: 'racao-guabi', name: 'Guabi Natural', logoUrl: '/images/logos/guabi.webp', petType: 'Ambos' },
-      { id: 'racao-royal', name: 'Royal Canin', logoUrl: '/images/logos/royal.webp', petType: 'Ambos', description: 'Nutrição sob medida.'},
-      { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos' },
-      { id: 'racao-palatto', name: 'Pet Palatto', logoUrl: '/images/logos/pet-palatto.webp', petType: 'Ambos' },
-      { id: 'racao-premiatta', name: 'Whey HD Premiatta', logoUrl: '/images/logos/premiatta.webp', petType: 'Cão' },
+      { id: 'racao-formulanatural', name: 'Fórmula Natural', logoUrl: '/images/logos/formulanatural.webp', petType: 'Ambos', link: 'https://adimax.com.br/formula-natural/' },
+      { id: 'racao-guabi', name: 'Guabi Natural', logoUrl: '/images/logos/guabi.webp', petType: 'Ambos', 
+        link: 'https://guabinatural.com.br/pt' },
+      { id: 'racao-royal', name: 'Royal Canin', logoUrl: '/images/logos/royal.webp', petType: 'Ambos', link: 'https://www.royalcanin.com/br/' },
+      { id: 'racao-premier', name: 'PremieR', logoUrl: '/images/logos/premierpet.webp', petType: 'Ambos', 
+        link: 'https://premierpet.com.br/premier/' },
+      { id: 'racao-golden', name: 'GoldeN', logoUrl: '/images/logos/golden.webp', petType: 'Ambos', link: 'https://premierpet.com.br/golden/' },
+      { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos', link: 'https://granplus.com.br/pt' },
+      { id: 'racao-palatto', name: 'Pet Palatto', logoUrl: '/images/logos/pet-palatto.webp', petType: 'Ambos', link: 'https://andrealan.com.br/petpalatto/' },
+      { id: 'racao-premiatta', name: 'Whey HD Premiatta', logoUrl: '/images/logos/premiatta.webp', petType: 'Cão', link: 'https://premiatta.com/wheyhd-caes' },
     ],
   },
   {
@@ -54,10 +56,10 @@ const categoriesData: Category[] = [
         { id: 'ap-bravecto-c3', name: 'Bravecto Cães (10 a 20kg)', logoUrl: '/images/logos/Bravecto-cao3.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
         { id: 'ap-bravecto-c4', name: 'Bravecto Cães (20 a 40kg)', logoUrl: '/images/logos/Bravecto-cao4.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
         { id: 'ap-bravecto-c5', name: 'Bravecto Cães (40 a 56kg)', logoUrl: '/images/logos/Bravecto-cao5.webp', petType: 'Cão', description: 'Proteção por até 12 semenas contra pulgas e carrapatos. Comprimido mastigável.' },
-        { id: 'ap-bravecto-g1', name: 'Bravecto Gatos (1,2 a 2,8kg)', logoUrl: '/images/logos/bravecto-gato1.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
-        { id: 'ap-bravecto-g2', name: 'Bravecto Gatos (2,8 a 6,25kg)', logoUrl: '/images/logos/bravecto-gato2.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
-        { id: 'ap-bravecto-g3', name: 'Bravecto Gatos (6,25 a 12,5kg)', logoUrl: '/images/logos/bravecto-gato3.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
-        { id: 'ap-bravecto-gplus', name: 'Bravecto Plus Gatos', logoUrl: '/images/logos/bravecto-gato-plus.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas, sarna otodécica e vermes. Aplicação tópica.' },
+        { id: 'ap-bravecto-g1', name: 'Bravecto Gatos (1,2 a 2,8kg)', logoUrl: '/images/logos/Bravecto-gato1.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
+        { id: 'ap-bravecto-g2', name: 'Bravecto Gatos (2,8 a 6,25kg)', logoUrl: '/images/logos/Bravecto-gato2.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
+        { id: 'ap-bravecto-g3', name: 'Bravecto Gatos (6,25 a 12,5kg)', logoUrl: '/images/logos/Bravecto-gato3.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas. Aplicação tópica.' },
+        { id: 'ap-bravecto-gplus', name: 'Bravecto Plus Gatos', logoUrl: '/images/logos/Bravecto-gato-plus.webp', petType: 'Gato', description: 'Proteção por até 12 semenas contra pulgas, sarna otodécica e vermes. Aplicação tópica.' },
       ]},
       { id: 'ap-nexgard', name: 'NexGard', logoUrl: '/images/logos/logo-nexgard.webp', petType: 'Ambos', subBrands: [
         { id: 'ap-nexgard-caes', name: 'Nexgard Cães', logoUrl: '/images/logos/nexgard_caes.webp', petType: 'Cão', description: 'Proteção mensal contra pulgas e carrapatos. Comprimido mastigável mensal.' },
@@ -112,7 +114,6 @@ const categoriesData: Category[] = [
     ],
   },
 ];
-// --- Fim dos Dados ---
 
 export default function ALoja() {
   const [activePetFilter, setActivePetFilter] = useState<'Todos' | 'Cão' | 'Gato'>('Todos');
@@ -184,7 +185,6 @@ export default function ALoja() {
           </div>
         </section>
 
-        {/* Seção das Categorias */}
         <section className="py-16 sm:py-24">
           <div className="container mx-auto max-w-7xl space-y-16 px-4">
             {filteredCategories.length === 0 && (
@@ -204,74 +204,120 @@ export default function ALoja() {
                 {category.brands && category.brands.length > 0 && (
                   <div className="mt-8">
                     <h3 className="text-lg font-semibold text-[#224724]">Algumas das Marcas que Trabalhamos:</h3>
+                    {/* Subtítulo Mobile adicionado aqui */}
+                    {category.name === 'Rações' && (
+                       <p className="mt-4 text-sm text-center text-gray-500 md:hidden">
+                          Clique nas imagens para conferir os detalhes
+                       </p>
+                    )}
                     <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-                      {category.brands.map((brand) => (
-                        <div key={brand.id} className="relative">
-                          <div
-                            {...(brand.subBrands && brand.subBrands.length > 0 ? {
-                                 className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1
-                                            ${expandedBrandId === brand.id ? 'border-[#9dd03a] shadow-lg' : 'border-transparent hover:border-[#9dd03a] hover:shadow-lg'}
-                                            md:cursor-pointer`,
-                                 onClick: () => toggleExpand(brand.id),
-                                 role: "button",
-                                 tabIndex: 0,
-                                 'aria-expanded': expandedBrandId === brand.id,
-                                 'aria-controls': `sub-brands-${brand.id}`
-                            } : {
-                                className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out border-transparent hover:border-[#9dd03a] hover:shadow-lg cursor-default`
-                            })}
-                          >
-                            <div className="flex h-[80%] w-full items-center justify-center">
-                              <Image
-                                src={brand.logoUrl}
-                                alt={`Logo ${brand.name}`}
-                                width={150} height={90}
-                                className="object-contain max-h-full max-w-full"
-                              />
-                            </div>
-                            <span className="mt-1 block w-full truncate px-1 text-xs font-medium text-gray-600 group-hover:text-[#224724]">
-                               {brand.name.includes('(') ? brand.name.split(' (')[0] : brand.name}
-                            </span>
-                             {brand.subBrands && brand.subBrands.length > 0 && (
-                               <span className="absolute bottom-1 right-1 hidden text-gray-400 group-hover:text-[#224724] md:block">
-                                   {expandedBrandId === brand.id ? ( <ChevronUpIcon className="h-4 w-4" /> ) : ( <ChevronDownIcon className="h-4 w-4" /> )}
-                               </span>
-                             )}
-                          </div>
+                      {category.brands.map((brand) => {
+                        const brandLink = brand.link || '#';
+                        const isExternalLink = brandLink.startsWith('http') || brandLink.startsWith('https');
 
-                          {expandedBrandId === brand.id && brand.subBrands && brand.subBrands.length > 0 && (
+                        return (
+                          <div key={brand.id} className="relative flex flex-col">
                             <div
-                              id={`sub-brands-${brand.id}`}
-                              className="absolute left-0 z-20 mt-1 hidden w-full max-w-sm transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:block md:w-[300%] lg:max-w-md xl:max-w-lg animate-fade-in"
+                              {...(brand.subBrands && brand.subBrands.length > 0 ? {
+                                   className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1 relative
+                                              ${expandedBrandId === brand.id ? 'border-[#9dd03a] shadow-lg' : 'border-transparent hover:border-[#9dd03a] hover:shadow-lg'}
+                                              md:cursor-pointer`,
+                                   onClick: () => toggleExpand(brand.id),
+                                   role: "button",
+                                   tabIndex: 0,
+                                   'aria-expanded': expandedBrandId === brand.id,
+                                   'aria-controls': `sub-brands-${brand.id}`
+                              } : {
+                                  className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out border-transparent hover:border-[#9dd03a] hover:shadow-lg relative cursor-default`
+                              })}
                             >
-                              <h4 className="mb-3 border-b pb-2 text-base font-bold text-[#224724]">Linhas / Produtos {brand.name}:</h4>
-                              <div className="max-h-60 space-y-3 overflow-y-auto pr-2">
-                                {brand.subBrands.map((subBrand) => (
-                                    <div key={subBrand.id} className="flex items-start space-x-3 border-b pb-2 last:border-b-0">
-                                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded border p-1">
-                                        <Image
-                                          src={subBrand.logoUrl}
-                                          alt={`Logo ${subBrand.name}`}
-                                          width={90} height={60}
-                                          className="object-contain"
-                                        />
-                                      </div>
-                                      <div>
-                                        <p className="text-sm font-semibold text-gray-800">{subBrand.name}</p>
-                                        {subBrand.description && (
-                                          <p className="mt-0.5 text-xs text-gray-600">{subBrand.description}</p>
-                                        )}
-                                      </div>
-                                    </div>
-                                  ))}
-                                {brand.subBrands.length === 0 && (
-                                  <p className="text-sm text-gray-500 italic">Nenhuma linha encontrada para o filtro &quot;{activePetFilter}&quot;.</p>
-                                )}
+                              {category.name === 'Rações' && (
+                                isExternalLink ? (
+                                    <a href={brandLink} target="_blank" rel="noopener noreferrer" className="md:hidden absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></a>
+                                ) : (
+                                    <Link href={brandLink} className="md:hidden absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></Link>
+                                )
+                              )}
+
+                              <div className="flex h-[80%] w-full items-center justify-center">
+                                <Image
+                                  src={brand.logoUrl}
+                                  alt={`Logo ${brand.name}`}
+                                  width={150}
+                                  height={90}
+                                  className="object-contain max-h-full max-w-full"
+                                  loading="lazy"
+                                />
                               </div>
+                              <span className="mt-1 block w-full truncate px-1 text-xs font-medium text-gray-600 group-hover:text-[#224724]">
+                                 {brand.name.includes('(') ? brand.name.split(' (')[0] : brand.name}
+                              </span>
+
+                              {brand.subBrands && brand.subBrands.length > 0 && (
+                                 <span className="absolute bottom-1 right-1 hidden text-gray-400 group-hover:text-[#224724] md:block">
+                                     {expandedBrandId === brand.id ? ( <ChevronUpIcon className="h-4 w-4" /> ) : ( <ChevronDownIcon className="h-4 w-4" /> )}
+                                 </span>
+                               )}
                             </div>
-                          )}
-                        </div>
-                      ))}
+
+                            {expandedBrandId === brand.id && brand.subBrands && brand.subBrands.length > 0 && (
+                              <div
+                                id={`sub-brands-${brand.id}`}
+                                className="absolute left-0 z-20 mt-1 hidden w-full max-w-sm transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:block md:w-[300%] lg:max-w-md xl:max-w-lg animate-fade-in"
+                              >
+                                <h4 className="mb-3 border-b pb-2 text-base font-bold text-[#224724]">Linhas / Produtos {brand.name}:</h4>
+                                <div className="max-h-60 space-y-3 overflow-y-auto pr-2">
+                                  {brand.subBrands.map((subBrand) => (
+                                      <div key={subBrand.id} className="flex items-start space-x-3 border-b pb-2 last:border-b-0">
+                                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded border p-1">
+                                          <Image
+                                            src={subBrand.logoUrl}
+                                            alt={`Logo ${subBrand.name}`}
+                                            width={90}
+                                            height={60}
+                                            className="object-contain"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                        <div>
+                                          <p className="text-sm font-semibold text-gray-800">{subBrand.name}</p>
+                                          {subBrand.description && (
+                                            <p className="mt-0.5 text-xs text-gray-600">{subBrand.description}</p>
+                                          )}
+                                        </div>
+                                      </div>
+                                    ))}
+                                  {brand.subBrands.length === 0 && (
+                                    <p className="text-sm text-gray-500 italic">Nenhuma linha encontrada para o filtro &quot;{activePetFilter}&quot;.</p>
+                                  )}
+                                </div>
+                              </div>
+                            )}
+
+                           {category.name === 'Rações' && (
+                             <>
+                               {isExternalLink ? (
+                                    <a
+                                     href={brandLink}
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
+                                    >
+                                     Clique e confira
+                                    </a>
+                                ) : (
+                                    <Link
+                                     href={brandLink}
+                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
+                                    >
+                                     Clique e confira
+                                    </Link>
+                                )}
+                             </>
+                           )}
+                          </div>
+                        );
+                      })}
                     </div>
                     <p className="mt-4 text-sm text-gray-500 text-right italic">... e muitas outras disponíveis na loja!</p>
                   </div>
