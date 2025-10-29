@@ -225,10 +225,10 @@ export default function ALoja() {
 
                 {category.brands && category.brands.length > 0 && (
                   <div className="mt-8">
-                    <h3 className="text-lg font-semibold text-[#224724]">Algumas das Marcas que Trabalhamos:</h3>
+                    <h3 className="text-lg font-semibold text-[#224724]">Produtos em destaque:</h3>
                     {category.name === 'Rações' && (
-                       <p className="mt-4 text-sm text-center text-gray-500 md:hidden">
-                          Clique nas imagens para conferir os detalhes
+                       <p className="my-4 text-base text-center text-gray-500 font-semibold">
+                          Clique para saber mais sobre as empresas
                        </p>
                     )}
                     <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
@@ -254,9 +254,9 @@ export default function ALoja() {
                             >
                               {category.name === 'Rações' && (
                                 isExternalLink ? (
-                                    <a href={brandLink} target="_blank" rel="noopener noreferrer" className="md:hidden absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></a>
+                                    <a href={brandLink} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></a>
                                 ) : (
-                                    <Link href={brandLink} className="md:hidden absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></Link>
+                                    <Link href={brandLink} className="absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></Link>
                                 )
                               )}
                               <div className="flex h-[80%] w-full items-center justify-center">
@@ -279,28 +279,6 @@ export default function ALoja() {
                                  </span>
                                )}
                             </div>
-
-                           {category.name === 'Rações' && (
-                             <>
-                               {isExternalLink ? (
-                                    <a
-                                     href={brandLink}
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
-                                    >
-                                     Clique e confira
-                                    </a>
-                                ) : (
-                                    <Link
-                                     href={brandLink}
-                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
-                                    >
-                                     Clique e confira
-                                    </Link>
-                                )}
-                             </>
-                           )}
 
                             {expandedBrandId === brand.id && brand.subBrands && brand.subBrands.length > 0 && (
                               <div
