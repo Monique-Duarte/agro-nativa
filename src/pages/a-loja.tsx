@@ -89,30 +89,34 @@ const categoriesData: Category[] = [
   },
   {
     name: 'Conforto',
-    description: 'Caminhas, colchonetes e mantas para garantir o descanso e o conforto que seu melhor amigo merece.',
+    description: 'Tudo para o dia a dia: coleiras estilosas, guias seguras, comedouros, bebedouros, caixas de transporte, caminhas e colchonetes, tudo para garantir o descanso e o conforto que seu melhor amigo merece.',
     brands: [
         { id: 'conforto-bichocomluxo', name: 'Bicho com Luxo', logoUrl: '/images/logos/bichoComLuxo.webp', petType: 'Ambos', description: 'Caminhas confortáveis e estilosas.' },
-        { id: 'conforto-tapeteexemplo', name: 'Tapete Higiênico Exemplo', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Tapete+H', petType: 'Ambos', description: 'Alta absorção para manter a casa limpa.' },
+        { id: 'conforto-coleiras', name: 'Zeedog', logoUrl: '/images/logos/zeedog.webp', petType: 'Ambos', description: 'Acessórios para cachorros e gatos com design exclusivo Zee.Dog.' },
+        { id: 'conforto-coleiras', name: 'Zeecat', logoUrl: '/images/logos/zeecat.webp', petType: 'Gato', description: 'Acessórios para gatos com design exclusivo ZeeDog.' },
+        { id: 'conforto-areiav', name: 'Areia Viva Verde', logoUrl: '/images/logos/vivaverde.webp', petType: 'Ambos', description: 'Feita apenas com milho e mandioca e é 100% biodegradável.' },
+        { id: 'conforto-tapeteh', name: 'Tapete Higiênico', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Tapete+H', petType: 'Ambos', description: 'Alta absorção para manter a casa limpa.' },
     ],
   },
    {
     name: 'Brinquedos',
     description: 'Diversão garantida! Brinquedos interativos, mordedores resistentes e pelúcias para todos os portes e idades.',
     brands: [
-       { id: 'brinquedo-kong', name: 'Kong', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Kong', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
+       { id: 'brinquedo-kong', name: 'Kong', logoUrl: '/images/logos/kong.webp', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
+       { id: 'brinquedo-jambo', name: 'Jambo Pet', logoUrl: '/images/logos/jambo.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
        { id: 'brinquedo-petstages', name: 'Petstages', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Petstages', petType: 'Ambos', description: 'Brinquedos inovadores para cães e gatos.' },
        { id: 'brinquedo-buddytoys', name: 'Buddy Toys', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Buddy+Toys', petType: 'Ambos', description: 'Mordedores resistentes e divertidos.' },
     ],
   },
-  {
-    name: 'Acessórios',
-    description: 'Tudo para o dia a dia: coleiras estilosas, guias seguras, comedouros, bebedouros, caixas de transporte e mais.',
-     brands: [
-       { id: 'acessorios-zeedog', name: 'Zee.Dog', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=ZeeDog', petType: 'Ambos', description: 'Design e qualidade em coleiras, guias e peitorais.' },
-       { id: 'acessorios-chalesco', name: 'Chalesco', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Chalesco', petType: 'Ambos', description: 'Grande variedade de acessórios práticos.' },
-       { id: 'acessorios-furacao', name: 'Furacão Pet', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Furacão', petType: 'Ambos', description: 'Caixas de transporte, comedouros e mais.' },
-    ],
-  },
+  // {
+  //   name: 'Acessórios',
+  //   description: 'Tudo para o dia a dia: coleiras estilosas, guias seguras, comedouros, bebedouros, caixas de transporte e mais.',
+  //    brands: [
+  //      { id: 'acessorios-zeedog', name: 'Zee.Dog', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=ZeeDog', petType: 'Ambos', description: 'Design e qualidade em coleiras, guias e peitorais.' },
+  //      { id: 'acessorios-chalesco', name: 'Chalesco', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Chalesco', petType: 'Ambos', description: 'Grande variedade de acessórios práticos.' },
+  //      { id: 'acessorios-furacao', name: 'Furacão Pet', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Furacão', petType: 'Ambos', description: 'Caixas de transporte, comedouros e mais.' },
+  //   ],
+  // },
 ];
 
 export default function ALoja() {
@@ -125,6 +129,7 @@ export default function ALoja() {
   };
 
   const toggleExpand = (brandId: string) => {
+    // Only allow expanding/collapsing on desktop
     if (window.innerWidth >= 768) {
        setExpandedBrandId(expandedBrandId === brandId ? null : brandId);
     }
@@ -166,7 +171,6 @@ export default function ALoja() {
           </div>
         </section>
 
-        {/* Filtros Cão / Gato / Todos */}
         <section className="sticky top-16 z-20 border-b border-gray-200 bg-gray-100 py-4 sm:top-[72px]">
           <div className="container mx-auto flex max-w-7xl justify-center space-x-2 px-4 sm:space-x-4">
             {(['Todos', 'Cão', 'Gato'] as const).map((filterType) => (
@@ -204,7 +208,6 @@ export default function ALoja() {
                 {category.brands && category.brands.length > 0 && (
                   <div className="mt-8">
                     <h3 className="text-lg font-semibold text-[#224724]">Algumas das Marcas que Trabalhamos:</h3>
-                    {/* Subtítulo Mobile adicionado aqui */}
                     {category.name === 'Rações' && (
                        <p className="mt-4 text-sm text-center text-gray-500 md:hidden">
                           Clique nas imagens para conferir os detalhes
@@ -238,7 +241,6 @@ export default function ALoja() {
                                     <Link href={brandLink} className="md:hidden absolute inset-0 z-10" aria-label={`Saiba mais sobre ${brand.name}`}></Link>
                                 )
                               )}
-
                               <div className="flex h-[80%] w-full items-center justify-center">
                                 <Image
                                   src={brand.logoUrl}
@@ -260,10 +262,32 @@ export default function ALoja() {
                                )}
                             </div>
 
+                           {category.name === 'Rações' && (
+                             <>
+                               {isExternalLink ? (
+                                    <a
+                                     href={brandLink}
+                                     target="_blank"
+                                     rel="noopener noreferrer"
+                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
+                                    >
+                                     Clique e confira
+                                    </a>
+                                ) : (
+                                    <Link
+                                     href={brandLink}
+                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
+                                    >
+                                     Clique e confira
+                                    </Link>
+                                )}
+                             </>
+                           )}
+
                             {expandedBrandId === brand.id && brand.subBrands && brand.subBrands.length > 0 && (
                               <div
                                 id={`sub-brands-${brand.id}`}
-                                className="absolute left-0 z-20 mt-1 hidden w-full max-w-sm transform rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl sm:w-[250%] md:block md:w-[300%] lg:max-w-md xl:max-w-lg animate-fade-in"
+                                className="absolute top-full left-0 z-20 mt-1 hidden w-auto min-w-full rounded-lg border border-[#9dd03a] bg-white p-4 shadow-xl md:block md:w-[200%] md:max-w-md animate-fade-in"
                               >
                                 <h4 className="mb-3 border-b pb-2 text-base font-bold text-[#224724]">Linhas / Produtos {brand.name}:</h4>
                                 <div className="max-h-60 space-y-3 overflow-y-auto pr-2">
@@ -293,28 +317,6 @@ export default function ALoja() {
                                 </div>
                               </div>
                             )}
-
-                           {category.name === 'Rações' && (
-                             <>
-                               {isExternalLink ? (
-                                    <a
-                                     href={brandLink}
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
-                                    >
-                                     Clique e confira
-                                    </a>
-                                ) : (
-                                    <Link
-                                     href={brandLink}
-                                     className="mt-2 hidden w-full rounded bg-[#9dd03a] px-2 py-1 text-center text-xs font-semibold text-[#224724] shadow-sm transition-colors hover:bg-[#224724] hover:text-white md:block"
-                                    >
-                                     Clique e confira
-                                    </Link>
-                                )}
-                             </>
-                           )}
                           </div>
                         );
                       })}
