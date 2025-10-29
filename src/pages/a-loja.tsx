@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -123,18 +123,35 @@ const categoriesData: Category[] = [
 export default function ALoja() {
   const [activePetFilter, setActivePetFilter] = useState<'Todos' | 'Cão' | 'Gato'>('Todos');
   const [expandedBrandId, setExpandedBrandId] = useState<string | null>(null);
-
+  const brandRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const handleFilterChange = (filter: 'Todos' | 'Cão' | 'Gato') => {
     setActivePetFilter(filter);
     setExpandedBrandId(null);
   };
 
   const toggleExpand = (brandId: string) => {
-    // Only allow expanding/collapsing on desktop
     if (window.innerWidth >= 768) {
        setExpandedBrandId(expandedBrandId === brandId ? null : brandId);
     }
   };
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (expandedBrandId === null) return;
+      const expandedBrandRef = brandRefs.current[expandedBrandId];
+      if (expandedBrandRef && !expandedBrandRef.contains(event.target as Node)) {
+        setExpandedBrandId(null);
+      }
+    }
+
+    if (expandedBrandId !== null) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [expandedBrandId]);
 
   const filteredCategories = categoriesData.map(category => ({
     ...category,
@@ -220,7 +237,7 @@ export default function ALoja() {
                         const isExternalLink = brandLink.startsWith('http') || brandLink.startsWith('https');
 
                         return (
-                          <div key={brand.id} className="relative flex flex-col">
+                          <div key={brand.id} className="relative flex flex-col" ref={(el) => { brandRefs.current[brand.id] = el; }}>
                             <div
                               {...(brand.subBrands && brand.subBrands.length > 0 ? {
                                    className: `group flex h-36 w-full flex-col items-center justify-center rounded-md border-2 bg-white p-2 text-center transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#9dd03a] focus:ring-offset-1 relative
