@@ -38,7 +38,7 @@ const categoriesData: Category[] = [
       { id: 'racao-guabi', name: 'Guabi Natural', logoUrl: '/images/logos/guabi.webp', petType: 'Ambos', 
         link: 'https://guabinatural.com.br/pt' },
       { id: 'racao-royal', name: 'Royal Canin', logoUrl: '/images/logos/royal.webp', petType: 'Ambos', link: 'https://www.royalcanin.com/br/' },
-      { id: 'racao-premier', name: 'PremieR', logoUrl: '/images/logos/premierpet.webp', petType: 'Ambos', 
+      { id: 'racao-premier', name: 'PremieR', logoUrl: '/images/logos/premierPet.webp', petType: 'Ambos', 
         link: 'https://premierpet.com.br/premier/' },
       { id: 'racao-golden', name: 'GoldeN', logoUrl: '/images/logos/golden.webp', petType: 'Ambos', link: 'https://premierpet.com.br/golden/' },
       { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos', link: 'https://granplus.com.br/pt' },
@@ -95,7 +95,8 @@ const categoriesData: Category[] = [
         { id: 'conforto-coleiras', name: 'Zeedog', logoUrl: '/images/logos/zeedog.webp', petType: 'Ambos', description: 'Acessórios para cachorros e gatos com design exclusivo Zee.Dog.' },
         { id: 'conforto-coleiras', name: 'Zeecat', logoUrl: '/images/logos/zeecat.webp', petType: 'Gato', description: 'Acessórios para gatos com design exclusivo ZeeDog.' },
         { id: 'conforto-areiav', name: 'Areia Viva Verde', logoUrl: '/images/logos/vivaverde.webp', petType: 'Ambos', description: 'Feita apenas com milho e mandioca e é 100% biodegradável.' },
-        { id: 'conforto-tapeteh', name: 'Tapete Higiênico', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Tapete+H', petType: 'Ambos', description: 'Alta absorção para manter a casa limpa.' },
+        { id: 'conforto-tapetea', name: 'Great Pets Areia', logoUrl: '/images/logos/greatpetsAreia.webp', petType: 'Ambos', description: 'Areia Higiênica Biodegradável Para Gatos Great Pets Fina 2kg' },
+        { id: 'conforto-tapeteh', name: 'Great Pets', logoUrl: '/images/logos/greatpets.webp', petType: 'Ambos', description: 'Tapete Higiênico com carvão ativado e bambu: melhora o controle de odores e ajuda a camuflar as marcas de xix.' },
     ],
   },
    {
