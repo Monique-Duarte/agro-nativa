@@ -13,7 +13,7 @@ export default function About() {
               Estamos localizados no bairro Mar Grosso! Tudo para sua família!
             </p>
             <p className="my-4 text-base leading-7 text-gray-600">
-              Oferecemos produtos de petshop, jardinagem, ferramentas e
+              Oferecemos produtos de petshop, jardinagem, utensílios, além de
               serviços de banho e tosa, garantindo cuidado e qualidade para seu
               lar e seus animais.
             </p>
