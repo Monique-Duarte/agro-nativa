@@ -8,7 +8,7 @@ interface SubBrand {
   id: string;
   name: string;
   logoUrl: string;
-  petType?: 'Cão' | 'Gato' | 'Ambos';
+  petType?: 'Cão' | 'Gato' | 'Não Convencionais' | 'Ambos';
   description?: string;
   link?: string;
 }
@@ -17,7 +17,7 @@ interface Brand {
   id: string;
   name: string;
   logoUrl: string;
-  petType?: 'Cão' | 'Gato' | 'Ambos';
+  petType?: 'Cão' | 'Gato' | 'Não Convencionais' |'Ambos';
   subBrands?: SubBrand[];
   description?: string;
   link?: string;
@@ -44,6 +44,8 @@ const categoriesData: Category[] = [
       { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos', link: 'https://granplus.com.br/pt' },
       { id: 'racao-palatto', name: 'Pet Palatto', logoUrl: '/images/logos/pet-palatto.webp', petType: 'Ambos', link: 'https://andrealan.com.br/petpalatto/' },
       { id: 'racao-premiatta', name: 'Whey HD Premiatta', logoUrl: '/images/logos/premiatta.webp', petType: 'Cão', link: 'https://premiatta.com/wheyhd-caes' },
+      { id: 'racao-nao-convencionais', name: 'Mix de sementes', logoUrl: '/images/logos/sementes.webp', petType: 'Não Convencionais', link: '' },
+      { id: 'racao-nao-convencionaisp', name: 'Alimentação para Peixes', logoUrl: '/images/logos/peixes.webp', petType: 'Não Convencionais', link: '' },
     ],
   },
   {
@@ -65,12 +67,9 @@ const categoriesData: Category[] = [
         { id: 'ap-nexgard-caes', name: 'Nexgard Cães', logoUrl: '/images/logos/nexgard_caes.webp', petType: 'Cão', description: 'Proteção mensal contra pulgas e carrapatos. Comprimido mastigável mensal.' },
         { id: 'ap-nexgard-gatos', name: 'Nexgard Combo Gatos', logoUrl: '/images/logos/nexgard-gatos2.webp', petType: 'Gato', description: 'Proteção mensal contra pulgas, sarna e vermes. Aplicação tópica mensal.' },
       ]},
-
       { id: 'ap-nexgardSpectra', name: 'NexGard Spectra', logoUrl: '/images/logos/NexGardSpectra.webp', petType: 'Cão', subBrands: [
         { id: 'ap-nexgard-spectra', name: 'Nexgard Spectra Cães', logoUrl: '/images/logos/nexgard_spectra.webp', petType: 'Cão', description: 'Proteção mensal contra pulgas, carrapatos, sarna e vermes. Comprimido mastigável, protege por 30 dias.' },
       ]},
-
-
       { id: 'ap-defenza', name: 'Defenza (cães)', logoUrl: '/images/logos/defenza.webp', petType: 'Cão', description: 'Comprimido para cães (35 dias).' },
       { id: 'ap-seresto', name: 'Coleira Seresto', logoUrl: '/images/logos/Seresto.webp', petType: 'Ambos', description: 'Coleira protetora para cães e gatos, protege contra pulga e carrapato por até 8 meses.' },
     ],
@@ -97,16 +96,21 @@ const categoriesData: Category[] = [
         { id: 'conforto-areiav', name: 'Areia Viva Verde', logoUrl: '/images/logos/vivaverde.webp', petType: 'Ambos', description: 'Feita apenas com milho e mandioca e é 100% biodegradável.' },
         { id: 'conforto-tapetea', name: 'Great Pets Areia', logoUrl: '/images/logos/greatpetsAreia.webp', petType: 'Ambos', description: 'Areia Higiênica Biodegradável Para Gatos Great Pets Fina 2kg' },
         { id: 'conforto-tapeteh', name: 'Great Pets', logoUrl: '/images/logos/greatpets.webp', petType: 'Ambos', description: 'Tapete Higiênico com carvão ativado e bambu: melhora o controle de odores e ajuda a camuflar as marcas de xix.' },
+        { id: 'sanitario-gato', name: 'Sanitário Maracanã Great Pets', logoUrl: '/images/logos/sanitario.webp', petType: 'Gato', description: 'Sanitário Maracanã Great Pets com pá e tapete coletor de areia' },
+        { id: 'casinhas-clickNew', name: 'Casa ClickNew', logoUrl: '/images/logos/casinha_para_pet.webp', petType: 'Cão', description: 'Casa ClickNew, feitas com materiais de alta qualidade para garantir segurança, resistência e o aconchego que seu pet merece.' },
+        { id: 'viveiro-aves', name: 'Viveiro para Aves', logoUrl: '/images/logos/viveiro.webp', petType: 'Não Convencionais', description: 'Viveiro para aves.' },
+        { id: 'gaiola-roedores', name: 'Gaiola para Roedores', logoUrl: '/images/logos/gaiola-roedores.webp', petType: 'Não Convencionais', description: 'gaiola para roedores.' },
+        { id: 'terrario', name: 'Terrário para Répteis', logoUrl: '/images/logos/terrario.webp', petType: 'Não Convencionais', description: 'terrário para répteis.' },
     ],
   },
    {
     name: 'Brinquedos',
     description: 'Diversão garantida! Brinquedos interativos, mordedores resistentes e pelúcias para todos os portes e idades.',
     brands: [
-       { id: 'brinquedo-kong', name: 'Kong', logoUrl: '/images/logos/kong.webp', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
-       { id: 'brinquedo-jambo', name: 'Jambo Pet', logoUrl: '/images/logos/jambo.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
-       { id: 'brinquedo-petstages', name: 'Petstages', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Petstages', petType: 'Ambos', description: 'Brinquedos inovadores para cães e gatos.' },
-       { id: 'brinquedo-buddytoys', name: 'Buddy Toys', logoUrl: 'https://placehold.co/120x60/cccccc/ffffff?text=Buddy+Toys', petType: 'Ambos', description: 'Mordedores resistentes e divertidos.' },
+      { id: 'brinquedo-kong', name: 'Kong', logoUrl: '/images/logos/kong.webp', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
+      { id: 'brinquedo-jambo', name: 'Jambo Pet', logoUrl: '/images/logos/jambo.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
+      { id: 'brinquedo-aves', name: 'Brinquedos para Aves', logoUrl: '/images/logos/brinquedo-aves.webp', petType: 'Não Convencionais', description: 'Brinquedos, corda, bola e espelhos.' },
+      { id: 'brinquedo-roedores', name: 'Brinquedos para Roedores', logoUrl: '/images/logos/brinquedo-roedores.webp', petType: 'Não Convencionais', description: 'Brinquedos, corda, pinus.' },
     ],
   },
   // {
@@ -121,10 +125,10 @@ const categoriesData: Category[] = [
 ];
 
 export default function ALoja() {
-  const [activePetFilter, setActivePetFilter] = useState<'Todos' | 'Cão' | 'Gato'>('Todos');
+  const [activePetFilter, setActivePetFilter] = useState<'Todos' | 'Cão' | 'Gato' | 'Não Convencionais'>('Todos');
   const [expandedBrandId, setExpandedBrandId] = useState<string | null>(null);
   const brandRefs = useRef<Record<string, HTMLDivElement | null>>({});
-  const handleFilterChange = (filter: 'Todos' | 'Cão' | 'Gato') => {
+  const handleFilterChange = (filter: 'Todos' | 'Cão' | 'Gato' | 'Não Convencionais') => {
     setActivePetFilter(filter);
     setExpandedBrandId(null);
   };

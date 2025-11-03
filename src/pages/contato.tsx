@@ -50,8 +50,8 @@ export default function Contato() {
                 <EnvelopeIcon className="h-10 w-10 text-[#9dd03a]" />
                 <h3 className="mt-6 text-xl font-semibold text-[#224724]">E-mail</h3>
                 <p className="mt-2 text-base leading-7 text-gray-600">
-                  <a href="mailto:contato@agronativa.com.br" className="hover:text-[#9dd03a] hover:underline">
-                    contato@agronativa.com.br
+                  <a href="mailto:agronativalaguna@gmail.com" className="hover:text-[#9dd03a] hover:underline">
+                    agronativalaguna@gmail.com
                   </a>
                 </p>
                 <p className="text-sm leading-6 text-gray-500">Para outras questões e parcerias.</p>

@@ -23,8 +23,10 @@ export default function Petshop() {
               Banho e Tosa com Carinho e Comodidade
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-            Nossos serviços são realizados com carinho e produtos de qualidade,
-            pensando no melhor para o seu pet. 
+            Nossos serviços são realizados com produtos Therapet veganos e testados dermatológica e oftalmologicamente.
+            </p>
+            <p className="text-lg leading-8 text-gray-300">
+              Nosso compromisso é com a saúde e bem-estar do seu pet!
             </p>
           </div>
         </section>

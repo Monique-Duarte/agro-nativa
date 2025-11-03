@@ -8,11 +8,11 @@ const serviceList = [
   {
     title: "Planos de Banho",
     description:
-      "Entre em contato para encontrar o que melhor se adapta a necessidade do seu pet!",
+      "Produtos Therapet veganos e testados dermatológica e oftalmologicamente. Entre em contato para encontrar o que melhor se adapta a necessidade do seu pet!",
     href: "/petshop",
     icon: (
       <Image
-        src="/images/petshoppb.png"
+        src="/images/terapeutico.png"
         alt="Ícone de Petshop"
         width={50}
         height={50}
@@ -36,13 +36,13 @@ const serviceList = [
     ),
   },
   {
-    title: "Banhos Terapêuticos",
+    title: "Petshop Completo",
     description:
-      "Cuidados especiais para pets com pele sensível. Tudo para garantir a saúde e bem-estar do seu parceiro.",
-    href: "/petshop",
+      "Tudo para cães e gatos, e nosso diferencial: uma linha completa para animais não convencionais, como aves e répteis!",
+    href: "/a-loja",
     icon: (
       <Image
-        src="/images/terapeutico.png"
+        src="/images/petshoppb.png"
         alt="Ícone de Petshop"
         width={50}
         height={50}
