@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>AgroNativa Laguna | Petshop, Ferramentas e Utensílios</title>
+        <title>AgroNativa Laguna | Petshop, Jardinagem e Utensílios</title>
         <meta
           name="description"
           content="Tudo para seu pet, casa e jardim no bairro Mar Grosso. Planos de banho e tosa com leva e traz."

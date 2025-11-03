@@ -12,7 +12,7 @@ const BASE_URL = 'https://agronativa.vercel.app/';
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const pageTitle = "AgroNativa Laguna | Petshop, Ferramentas e Utensílios";
+  const pageTitle = "AgroNativa Laguna | Petshop, Jardinagem e Utensílios";
   const pageDescription = "Tudo para seu pet, casa e jardim no bairro Mar Grosso. Planos de banho e tosa com leva e traz.";
   const ogImage = `${BASE_URL}/logoO.png`;
   const pageUrl = `${BASE_URL}${router.pathname}`;
