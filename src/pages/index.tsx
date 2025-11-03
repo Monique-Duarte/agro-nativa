@@ -4,6 +4,7 @@ import Services from '@/components/home/Services';
 import StoreCategories from '@/components/home/StoreCategories';
 import About from '@/components/home/About';
 import Location from '@/components/home/Location';
+import InstagramCTA from '@/components/home/InstagramCTA';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <StoreCategories />
       <About />
+      <InstagramCTA />
       <Location />
     </>
   );
