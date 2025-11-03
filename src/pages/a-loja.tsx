@@ -109,6 +109,7 @@ const categoriesData: Category[] = [
     brands: [
       { id: 'brinquedo-kong', name: 'Kong', logoUrl: '/images/logos/kong.webp', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
       { id: 'brinquedo-jambo', name: 'Jambo Pet', logoUrl: '/images/logos/jambo.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
+      { id: 'brinquedo-fofos', name: 'Fofos Pet', logoUrl: '/images/logos/fofos.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
       { id: 'brinquedo-aves', name: 'Brinquedos para Aves', logoUrl: '/images/logos/brinquedo-aves.webp', petType: 'Não Convencionais', description: 'Brinquedos, corda, bola e espelhos.' },
       { id: 'brinquedo-roedores', name: 'Brinquedos para Roedores', logoUrl: '/images/logos/brinquedo-roedores.webp', petType: 'Não Convencionais', description: 'Brinquedos, corda, pinus.' },
     ],
