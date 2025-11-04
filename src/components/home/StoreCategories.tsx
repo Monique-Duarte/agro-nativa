@@ -29,7 +29,7 @@ const categories = [
     ),
   },
   {
-    name: 'Ferramentas',
+    name: 'Utensílios',
     href: '/a-loja',
     icon: (
       <Image
@@ -52,7 +52,7 @@ export default function StoreCategories() {
             Uma loja completa para seu lar
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Petshop, ferramentas e utensílios, temos tudo o que você precisa para sua casa. <strong>Contamos também com serviço de entrega, entre em contato conosco!</strong>
+            Petshop, Jardinage e utensílios, temos tudo o que você precisa para sua casa. <strong>Contamos também com serviço de entrega, entre em contato conosco!</strong>
           </p>
         </div>
 

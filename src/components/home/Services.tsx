@@ -8,7 +8,7 @@ const serviceList = [
   {
     title: "Planos de Banho",
     description:
-      "Produtos Therapet veganos e testados dermatológica e oftalmologicamente. Entre em contato para encontrar o que melhor se adapta a necessidade do seu pet!",
+      "Produtos Therapet veganos e testados dermatológica e oftalmologicamente. Entre em contato para encontrar o que melhor se adapta à necessidade do seu pet!",
     href: "/petshop",
     icon: (
       <Image
@@ -54,7 +54,7 @@ const serviceList = [
 
 export default function Services() {
   return (
-    <section className="bg-gray-50 py-8 sm:py-24">
+    <section className="bg-gray-50 py-8 sm:py-16">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-[#224724] sm:text-4xl">
@@ -70,17 +70,21 @@ export default function Services() {
           {serviceList.map((service) => (
             <div
               key={service.title}
-              className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
+              className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-[#9dd03a]"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#9dd03a] text-[#224724]">
-                {service.icon}
+              <div className="flex items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#9dd03a] text-[#224724] shrink-0">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-[#224724]">
+                  {service.title}
+                </h3>
               </div>
-              <h3 className="mt-5 text-xl font-semibold text-[#224724]">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-base text-gray-600">
+
+              <p className="mt-4 text-base text-gray-600">
                 {service.description}
               </p>
+
               <Link
                 href={service.href}
                 {...(service.href.startsWith("http")
@@ -88,9 +92,7 @@ export default function Services() {
                   : {})}
                 className="mt-4 inline-block font-medium text-[#224724] hover:text-[#9dd03a]"
               >
-                {service.href.startsWith("http")
-                  ? "Fale Conosco"
-                  : "Saiba Mais"}{" "}
+                {service.href.startsWith("http") ? "Fale Conosco" : "Saiba Mais"}{" "}
                 &rarr;
               </Link>
             </div>

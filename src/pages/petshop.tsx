@@ -25,7 +25,7 @@ export default function Petshop() {
             <p className="mt-6 text-lg leading-8 text-gray-300">
             Nossos serviços são realizados com produtos Therapet veganos e testados dermatológica e oftalmologicamente.
             </p>
-            <p className="text-lg leading-8 text-gray-300">
+            <p className="hidden md:flex text-lg leading-8 text-gray-300">
               Nosso compromisso é com a saúde e bem-estar do seu pet!
             </p>
           </div>
