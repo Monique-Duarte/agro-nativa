@@ -47,12 +47,13 @@ export default function Location() {
 
               <div>
                 <h3 className="text-xl font-semibold text-[#224724]">
-                  Horário
+                  Horário de funcionamento
                 </h3>
                 <ul className="mt-1 text-gray-600">
-                  <li>Segunda a Sexta: 08:30 - 12:00 / 13:30 – 19:00</li>
-                  <li>Sábado: 08:30 - 13:00</li>
-                  <li>Domingo: Fechado</li>
+                  <li className="hidden md:flex">Segunda a Sexta: 08:30 - 12:00 / 13:30 – 19:00</li>
+                  <li className="flex md:hidden">  Segunda a Sexta: <br />08:30 - 12:00 <br /> 13:30 – 19:00</li>
+                  <li className="hidden md:flex">Sábado: 08:30 - 13:00</li>
+                  <li className="flex md:hidden mt-4">Sábado: <br /> 08:30 - 13:00</li>
                 </ul>
               </div>
             </div>
