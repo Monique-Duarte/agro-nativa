@@ -44,6 +44,8 @@ const categoriesData: Category[] = [
       { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos', link: 'https://granplus.com.br/pt' },
       { id: 'racao-palatto', name: 'Pet Palatto', logoUrl: '/images/logos/pet-palatto.webp', petType: 'Ambos', link: 'https://andrealan.com.br/petpalatto/' },
       { id: 'racao-premiatta', name: 'Whey HD Premiatta', logoUrl: '/images/logos/premiatta.webp', petType: 'Cão', link: 'https://premiatta.com/wheyhd-caes' },
+      { id: 'racao-nao-convencionaism', name: 'MegaZoo', logoUrl: '/images/logos/megazoo.webp', petType: 'Não Convencionais', link: 'https://megazoo.com.br/' },
+      { id: 'racao-nao-convencionaiss', name: 'Sellecta', logoUrl: '/images/logos/sellecta.webp', petType: 'Não Convencionais', link: 'https://www.sellectarovani.com.br/' },
       { id: 'racao-nao-convencionais', name: 'Mix de sementes', logoUrl: '/images/logos/sementes.webp', petType: 'Não Convencionais', link: '' },
       { id: 'racao-nao-convencionaisp', name: 'Alimentação para Peixes', logoUrl: '/images/logos/peixes.webp', petType: 'Não Convencionais', link: '' },
     ],
