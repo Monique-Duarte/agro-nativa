@@ -44,6 +44,8 @@ const categoriesData: Category[] = [
       { id: 'racao-granplus', name: 'Gran Plus', logoUrl: '/images/logos/granplus.webp', petType: 'Ambos', link: 'https://granplus.com.br/pt' },
       { id: 'racao-palatto', name: 'Pet Palatto', logoUrl: '/images/logos/pet-palatto.webp', petType: 'Ambos', link: 'https://andrealan.com.br/petpalatto/' },
       { id: 'racao-premiatta', name: 'Whey HD Premiatta', logoUrl: '/images/logos/premiatta.webp', petType: 'Cão', link: 'https://premiatta.com/wheyhd-caes' },
+      { id: 'racao-nao-convencionaism', name: 'MegaZoo', logoUrl: '/images/logos/megazoo.webp', petType: 'Não Convencionais', link: 'https://megazoo.com.br/' },
+      { id: 'racao-nao-convencionaiss', name: 'Sellecta', logoUrl: '/images/logos/sellecta.webp', petType: 'Não Convencionais', link: 'https://www.sellectarovani.com.br/' },
       { id: 'racao-nao-convencionais', name: 'Mix de sementes', logoUrl: '/images/logos/sementes.webp', petType: 'Não Convencionais', link: '' },
       { id: 'racao-nao-convencionaisp', name: 'Alimentação para Peixes', logoUrl: '/images/logos/peixes.webp', petType: 'Não Convencionais', link: '' },
     ],
@@ -109,6 +111,7 @@ const categoriesData: Category[] = [
     brands: [
       { id: 'brinquedo-kong', name: 'Kong', logoUrl: '/images/logos/kong.webp', petType: 'Ambos', description: 'Brinquedos duráveis e recheáveis.' },
       { id: 'brinquedo-jambo', name: 'Jambo Pet', logoUrl: '/images/logos/jambo.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
+      { id: 'brinquedo-fofos', name: 'Fofos Pet', logoUrl: '/images/logos/fofos.webp', petType: 'Cão', description: 'Brinquedos mordedor, corda, bola e pelúcia.' },
       { id: 'brinquedo-aves', name: 'Brinquedos para Aves', logoUrl: '/images/logos/brinquedo-aves.webp', petType: 'Não Convencionais', description: 'Brinquedos, corda, bola e espelhos.' },
       { id: 'brinquedo-roedores', name: 'Brinquedos para Roedores', logoUrl: '/images/logos/brinquedo-roedores.webp', petType: 'Não Convencionais', description: 'Brinquedos, corda, pinus.' },
     ],
